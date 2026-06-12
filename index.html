@@ -203,6 +203,29 @@ section{padding-block:clamp(3.6rem,7vw,6rem)}
 .reg-fact dt{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#bcdcec;margin-bottom:.3rem}
 .reg-fact dd{font-family:var(--display);font-size:1.22rem;color:var(--washi)}
 .reg-fact dd small{display:block;font-family:var(--body);font-size:.82rem;color:rgba(251,249,243,.7);font-weight:400;margin-top:.15rem}
+.bank-info dd{font-family:var(--body);font-size:.94rem;line-height:1.65;color:rgba(251,249,243,.86)}
+.bank-info dd span{display:block}
+.bank-info dd strong{font-weight:500;color:var(--washi)}
+
+/* credit card pay button (on indigo) */
+.pay-btn{display:inline-flex;align-items:center;gap:.45rem;margin-top:.1rem;
+  background:var(--yamabuki);color:var(--konjo);font-family:var(--body);font-weight:600;font-size:.92rem;
+  padding:.55rem 1.15rem;border-radius:999px;transition:transform .15s ease, box-shadow .2s ease}
+.pay-btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px -10px rgba(0,0,0,.55)}
+.pay-note{display:block;margin-top:.55rem;font-size:.8rem;color:rgba(251,249,243,.62);font-family:var(--body);font-weight:400}
+
+/* fees */
+.fee-wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:1.4rem;align-items:start}
+.fee-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--washi)}
+.fee-table{width:100%;border-collapse:collapse}
+.fee-table th,.fee-table td{text-align:left;padding:.85rem 1.2rem;border-bottom:1px solid var(--line-2)}
+.fee-table thead th{background:var(--konjo);color:var(--washi);font-family:var(--body);font-weight:500;font-size:.8rem;letter-spacing:.04em;vertical-align:bottom}
+.fee-table thead th small{display:block;font-weight:400;color:#bcdcec;font-size:.72rem;margin-top:.1rem}
+.fee-table tbody td{font-size:1rem;color:var(--sumi)}
+.fee-table tbody td:first-child{font-family:var(--display);color:var(--konjo)}
+.fee-table tbody td:not(:first-child){font-family:var(--display);color:var(--ai)}
+.fee-table tbody tr:last-child td{border-bottom:0}
+.fee-note{margin-top:1.3rem;font-size:.92rem;color:var(--muted)}
 
 /* form embed area */
 .form-embed{background:var(--washi);border-radius:16px;padding:.55rem;box-shadow:0 24px 60px -30px rgba(0,0,0,.6)}
@@ -246,7 +269,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   .nav-links a{width:100%;padding:.85rem 0;border-bottom:1px solid var(--line-2)}
   .nav-links .btn{margin-top:.8rem}
   .nav-toggle{display:block}
-  .about-grid,.venue-grid,.reg-grid,.org-grid{grid-template-columns:1fr}
+  .about-grid,.venue-grid,.reg-grid,.org-grid,.fee-wrap{grid-template-columns:1fr}
   .theme-grid{grid-template-columns:1fr 1fr}
   .spk-grid{grid-template-columns:1fr 1fr}
 }
@@ -276,6 +299,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
       <a href="#program">Program</a>
       <a href="#speakers">Speakers</a>
       <a href="#venue">Venue</a>
+      <a href="#fees">Fees</a>
       <a class="btn btn-primary" href="#register">Register</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -480,20 +504,76 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   </div>
 </section>
 
+<!-- ===================== FEES ===================== -->
+<section id="fees">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Registration fees</span>
+      <h2 class="section-title">Fees</h2>
+      <p class="lead">Early bird rates apply to payments received by 10 October 2026. The regular rate applies after that date.</p>
+    </div>
+    <div class="fee-wrap">
+      <div class="fee-card">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>Registration</th>
+              <th>Early bird<small>by 10 Oct</small></th>
+              <th>Regular<small>after 10 Oct</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>General</td><td>NT$1,200</td><td>NT$1,500</td></tr>
+            <tr><td>Student</td><td>NT$800</td><td>NT$1,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fee-card">
+        <table class="fee-table">
+          <thead>
+            <tr><th>Banquet</th><th>Fee</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>General</td><td>NT$1,000</td></tr>
+            <tr><td>Student</td><td>NT$500</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="fee-note">The registration fee includes lunch and coffee on both main days. Payment details are in the registration section below.</p>
+  </div>
+</section>
+
 <!-- ===================== REGISTER ===================== -->
 <section id="register" class="register">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Registration</span>
       <h2 class="section-title">Reserve your place</h2>
-      <p class="lead">Registration is free for the academic community. Complete the form below to register, submit an abstract, and sign up for the workshop dinner.</p>
+      <p class="lead">Complete the form below to register and submit an abstract. Registration fees are listed above; payment is by bank transfer or credit card.</p>
     </div>
 
     <div class="reg-grid">
       <div class="reg-info">
         <dl class="reg-fact"><dt>Registration deadline</dt><dd>To be announced<small>opens summer 2026</small></dd></dl>
         <dl class="reg-fact"><dt>Abstract deadline</dt><dd>To be announced<small>for talks &amp; posters</small></dd></dl>
-        <dl class="reg-fact"><dt>Fee</dt><dd>Free<small>lunch &amp; coffee included</small></dd></dl>
+        <dl class="reg-fact bank-info">
+          <dt>匯款資訊</dt>
+          <dd>
+            <span><strong>銀行名稱：</strong>012 台北富邦銀行</span>
+            <span><strong>銀行分行名稱：</strong>南港分行</span>
+            <span><strong>戶名：</strong>社團法人中華民國自然生態保育協會</span>
+            <span><strong>銀行帳號：</strong>82120000006429</span>
+          </dd>
+        </dl>
+        <dl class="reg-fact">
+          <dt>Credit card</dt>
+          <dd>
+            <!-- EDIT: replace href="#" with your secure payment link -->
+            <a class="pay-btn" href="#" target="_blank" rel="noopener">Pay by credit card</a>
+            <span class="pay-note">Secure payment link will be added here.</span>
+          </dd>
+        </dl>
       </div>
 
       <!-- ============================================================= -->
@@ -535,7 +615,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
         <h3>Contact</h3>
         <div class="contact-row">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <a href="mailto:workshop@example.org">workshop@example.org</a>
+          <a href="mailto:tjew2026@gmail.com">tjew2026@gmail.com</a>
         </div>
         <div class="contact-row">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
