@@ -105,8 +105,6 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
 .total{display:flex;justify-content:space-between;align-items:baseline;padding-top:.9rem;margin-top:.3rem}
 .total .l{font-weight:500}
 .total .v{font-family:var(--display);font-size:1.6rem;color:var(--konjo)}
-.orderno{font-size:.8rem;color:var(--muted);margin-top:.7rem}
-.orderno b{font-family:var(--display);color:var(--ai);letter-spacing:.02em}
 
 .pay-btn{display:flex;width:100%;justify-content:center;align-items:center;gap:.5rem;margin-top:1.2rem;
   background:var(--konjo);color:var(--washi);font-family:var(--body);font-weight:600;font-size:1rem;
@@ -118,18 +116,6 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
 .alt-pay{margin-top:1.4rem;font-size:.86rem;color:var(--muted)}
 .alt-pay a{color:var(--ai);text-decoration:underline}
 
-/* confirmation overlay */
-.overlay{position:fixed;inset:0;background:rgba(27,36,48,.55);display:none;place-items:center;padding:1.2rem;z-index:50}
-.overlay.show{display:grid}
-.modal{background:var(--washi);border-radius:18px;max-width:460px;width:100%;overflow:hidden;box-shadow:0 30px 70px -20px rgba(0,0,0,.5)}
-.modal-head{background:var(--konjo);color:var(--washi);border-top:4px solid var(--yamabuki);padding:1.3rem 1.5rem}
-.modal-head h3{color:var(--washi);font-size:1.3rem}
-.modal-body{padding:1.4rem 1.5rem}
-.modal-body p{font-size:.95rem;color:var(--sumi);margin-bottom:.9rem}
-.modal-body .ono{font-family:var(--display);font-size:1.2rem;color:var(--konjo);background:rgba(31,58,95,.06);padding:.6rem .9rem;border-radius:10px;text-align:center;letter-spacing:.03em}
-.modal-body .mini{font-size:.85rem;color:var(--muted);margin-top:1rem}
-.modal-close{display:block;width:100%;margin-top:1.2rem;background:transparent;border:1px solid var(--line);border-radius:999px;padding:.7rem;color:var(--konjo);font-family:var(--body);font-weight:500;cursor:pointer}
-.modal-close:hover{border-color:var(--konjo)}
 
 @media (max-width:820px){
   .checkout{grid-template-columns:1fr;gap:1.6rem}
@@ -164,7 +150,7 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
     <form id="cart" novalidate>
       <div class="step">
         <div class="step-head"><span class="step-num">1</span><h2>Registration</h2></div>
-        <div id="rateBadge" class="rate-badge">Early bird rate, until 10 October 2026</div>
+        <div id="rateBadge" class="rate-badge">Early bird rate, until 15 September 2026</div>
         <label class="opt selected">
           <input type="radio" name="cat" value="General" checked>
           <span class="opt-label"><span class="t">General</span><span class="s">Faculty, postdoc, and others</span></span>
@@ -223,7 +209,6 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
       <div class="summary-body">
         <div id="lines"></div>
         <div class="total"><span class="l">Total</span><span class="v" id="total">NT$0</span></div>
-        <div class="orderno">Order number: <b id="orderNo">generated at payment</b></div>
         <button class="pay-btn" id="payBtn" type="button">Continue to payment</button>
         <p class="pay-note">No card details are entered here. You will enter them on the secure payment provider page.</p>
         <p class="alt-pay">Prefer bank transfer? <a href="index.html#register">See transfer details</a>.</p>
@@ -232,18 +217,6 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
   </div>
 </main>
 
-<!-- confirmation overlay (shown when the payment provider is not yet connected) -->
-<div class="overlay" id="overlay">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-head"><h3 id="modalTitle">Order created</h3></div>
-    <div class="modal-body">
-      <p>Your order is ready. Quote this order number with your payment so we can match it.</p>
-      <div class="ono" id="modalOrderNo"></div>
-      <p class="mini" id="modalMsg">The secure card payment page is not connected yet. Once it is live, this button will take you straight to it.</p>
-      <button class="modal-close" id="modalClose">Close</button>
-    </div>
-  </div>
-</div>
 
 <script>
 // ---- configuration ----
@@ -252,7 +225,7 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
 // the buyer to ECPay's secure card page.
 const CONFIG = { paymentEndpoint: "https://script.google.com/macros/s/AKfycbzMh72B1YDUE9WEKMAGP7sfiyAB2czPxax_esqQSWZrRLRUwBtcg2Wcq6vyxoruMs0iIQ/exec" };
 
-const EARLY_DEADLINE = new Date("2026-10-10T23:59:59+08:00");
+const EARLY_DEADLINE = new Date("2026-09-15T23:59:59+08:00");
 const PRICES = {
   registration: { General: { early: 1200, regular: 1500 }, Student: { early: 800, regular: 1000 } },
   banquet: { General: 1000, Student: 500 },
@@ -277,7 +250,7 @@ function paintPrices() {
   });
   const badge = document.getElementById("rateBadge");
   if (isEarly) {
-    badge.textContent = "Early bird rate, until 10 October 2026";
+    badge.textContent = "Early bird rate, until 15 September 2026";
     badge.classList.remove("regular");
   } else {
     badge.textContent = "Regular rate";
@@ -313,12 +286,6 @@ function render() {
     '</span><span class="v">' + nf(i.amount) + '</span></div>'
   ).join("");
   document.getElementById("total").textContent = nf(total());
-}
-
-function makeOrderNo() {
-  const d = new Date(), p = n => String(n).padStart(2, "0");
-  return "TJEW" + String(d.getFullYear()).slice(2) + p(d.getMonth() + 1) + p(d.getDate())
-    + p(d.getHours()) + p(d.getMinutes()) + p(d.getSeconds());
 }
 
 // ---- interactions ----
@@ -371,15 +338,6 @@ function validate() {
 document.getElementById("payBtn").addEventListener("click", () => {
   if (!validate()) return;
 
-  // Not connected yet: show the order preview with a generated order number.
-  if (!CONFIG.paymentEndpoint) {
-    const ono = makeOrderNo();
-    document.getElementById("orderNo").textContent = ono;
-    document.getElementById("modalOrderNo").textContent = ono;
-    document.getElementById("overlay").classList.add("show");
-    return;
-  }
-
   // Hand the selection to the backend with a top-level form POST. The backend
   // recomputes the amount, signs the request, and redirects to ECPay's secure
   // card page. No card details are handled on this page.
@@ -401,13 +359,6 @@ document.getElementById("payBtn").addEventListener("click", () => {
   add("affiliation", state.affiliation);
   document.body.appendChild(f);
   f.submit();
-});
-
-document.getElementById("modalClose").addEventListener("click", () => {
-  document.getElementById("overlay").classList.remove("show");
-});
-document.getElementById("overlay").addEventListener("click", e => {
-  if (e.target.id === "overlay") e.currentTarget.classList.remove("show");
 });
 
 // init
