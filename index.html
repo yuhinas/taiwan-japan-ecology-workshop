@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 Taiwan-Japan Ecology Workshop · Academia Sinica, Taipei</title>
-<meta name="description" content="A three-day workshop bringing together ecologists from Taiwan and Japan at the Biodiversity Research Center, Academia Sinica, Taipei, 6 to 8 November 2026.">
-<meta property="og:title" content="2026 Taiwan-Japan Ecology Workshop">
-<meta property="og:description" content="Academia Sinica, Taipei · 6 to 8 November 2026">
+<title>The 8th Taiwan–Japan Ecology Workshop · Academia Sinica, Taipei</title>
+<meta name="description" content="The 8th Taiwan–Japan Ecology Workshop, hosted by the Biodiversity Research Center, Academia Sinica, Taipei — 15 to 17 November 2026 at the B1C Auditorium, Institute of Biomedical Sciences Building.">
+<meta property="og:title" content="The 8th Taiwan–Japan Ecology Workshop 2026">
+<meta property="og:description" content="Academia Sinica, Taipei · 15 to 17 November 2026">
 <meta property="og:image" content="key-visual.png">
 <meta property="og:type" content="website">
+
+<!-- ===================== FAVICON ===================== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJUYWl3YW4tSmFwYW4gRWNvbG9neSBXb3Jrc2hvcCI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iIzFmM2E1ZiIvPgogIDwhLS0gZGF3biBzdW4gb3ZlciBZdXNoYW4gLS0+CiAgPGNpcmNsZSBjeD0iMjIuNSIgY3k9IjEwLjUiIHI9IjMuMSIgZmlsbD0iI2NmOTAyMyIvPgogIDwhLS0gbWFpbiByaWRnZSAoWXVzaGFuKSAtLT4KICA8cGF0aCBkPSJNMy41IDI0LjUgTDExLjUgMTIgTDE2IDE4IEwxOS41IDEzLjUgTDI4LjUgMjQuNSBaIiBmaWxsPSIjZjZmMmU5Ii8+CiAgPCEtLSBzbm93LWNhcCAvIHNlY29uZCByaWRnZSBhY2NlbnQgLS0+CiAgPHBhdGggZD0iTTkgMTYgTDExLjUgMTIgTDE0IDE2IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YTg5YTgiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIHRoZSBibGFjayBidWxidWwncyByZWQgYmlsbCwgYSBzaW5nbGUgc2lnbmF0dXJlIGRvdCAtLT4KICA8Y2lyY2xlIGN4PSI2LjUiIGN5PSI3LjUiIHI9IjEuNyIgZmlsbD0iI2IyM2EyZSIvPgo8L3N2Zz4K">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1f3a5f">
 
 <!-- ===================== FONTS ===================== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,6 +91,10 @@ section{padding-block:clamp(3.6rem,7vw,6rem)}
 .nav-links a{font-size:.92rem;color:var(--ai);font-weight:500;position:relative;padding-block:.3rem}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--yamabuki);transition:width .25s ease}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+/* keep button text legible inside the nav (overrides .nav-links a color) */
+.nav-links a.btn-primary{color:#fbf9f3}
+.nav-links a.btn-primary:hover{color:#fbf9f3}
+.nav-links a.btn-ghost{color:var(--konjo)}
 .btn{
   display:inline-flex;align-items:center;gap:.5rem;
   font-family:var(--body);font-weight:500;font-size:.92rem;letter-spacing:.01em;
@@ -114,11 +123,46 @@ section{padding-block:clamp(3.6rem,7vw,6rem)}
 .hero-bar-cta .btn{padding:.7rem 1.5rem;font-size:.96rem}
 .tbc{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yamabuki);border:1px solid currentColor;border-radius:999px;padding:.1rem .5rem;margin-left:.1rem}
 
+/* ===================== HERO TITLE ===================== */
+.hero-head{margin-bottom:1.5rem}
+.hero-head .eyebrow{display:block;margin-bottom:.55rem}
+.hero-title{font-family:var(--display);font-weight:700;color:var(--konjo);
+  font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.14;letter-spacing:.01em}
+.hero-title .yr{color:var(--yamabuki)}
+
 /* ===================== ABOUT ===================== */
 .about-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:start}
+.about a{color:var(--ai);text-decoration:underline;text-underline-offset:2px}
+.about a:hover{color:var(--konjo)}
+.cover-note{margin-top:1.5rem;padding:1.1rem 1.3rem;background:var(--washi);
+  border-left:3px solid var(--yamabuki);border-radius:6px;
+  font-size:.9rem;line-height:1.6;color:var(--muted);max-width:62ch}
+.cover-note b{color:var(--konjo);font-weight:600}
 .about p + p{margin-top:1.1rem}
 .about p{color:var(--muted);font-size:1.04rem}
 .about strong{color:var(--sumi);font-weight:500}
+
+/* opening lede with drop cap */
+.about-lede{color:var(--sumi)!important;font-size:1.18rem!important;line-height:1.62}
+.about-lede::first-letter{
+  font-family:var(--display);font-weight:700;color:var(--yamabuki);
+  font-size:3.3rem;line-height:.82;float:left;margin:.06em .14em 0 0;
+}
+.about-lede strong{color:var(--konjo)}
+.jp{font-family:var(--display);color:var(--konjo);font-weight:600;white-space:nowrap}
+
+/* call for symposium proposals */
+.symp-call{display:flex;gap:.85rem;align-items:flex-start;margin-top:1.5rem;
+  padding:1rem 1.25rem;border:1px solid var(--line);border-left:3px solid var(--wakatake);
+  border-radius:8px;background:linear-gradient(180deg,var(--washi),var(--kinari));
+  font-size:.96rem;line-height:1.55;color:var(--sumi)}
+.symp-call svg{flex:none;color:var(--wakatake);margin-top:.15rem}
+.symp-call .lbl{display:block;font-family:var(--display);font-weight:700;color:var(--konjo);
+  font-size:1.02rem;margin-bottom:.15rem}
+.symp-call b{color:var(--yamabuki);font-weight:600}
+.symp-call a{color:var(--ai);font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.symp-call a:hover{color:var(--konjo)}
+
 .facts{border:1px solid var(--line);border-radius:14px;background:var(--washi);padding:1.6rem 1.7rem}
 .facts dl{display:grid;gap:1.05rem}
 .facts dt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hanada);font-weight:500}
@@ -197,6 +241,15 @@ section{padding-block:clamp(3.6rem,7vw,6rem)}
 .register .eyebrow{color:#bcdcec}
 .register h2{color:var(--washi)}
 .register .lead{color:rgba(251,249,243,.8)}
+.cap-note{display:flex;gap:.75rem;align-items:flex-start;margin-top:1.5rem;max-width:64ch;
+  padding:1rem 1.25rem;border:1px solid rgba(251,249,243,.22);border-left:3px solid var(--yamabuki);
+  border-radius:10px;background:rgba(251,249,243,.07);font-size:1rem;line-height:1.55;color:rgba(251,249,243,.9)}
+.cap-note svg{flex:none;color:var(--yamabuki);margin-top:.1rem}
+.cap-note strong{color:var(--washi);font-weight:600}
+.accom-fact dd small a{color:#bcdcec;font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.accom-fact dd small a:hover{color:var(--washi)}
+.form-notice{margin:.15rem .35rem .7rem;padding:.6rem .85rem;border-left:3px solid var(--yamabuki);
+  background:rgba(207,144,35,.10);border-radius:6px;font-size:.86rem;line-height:1.5;color:var(--sumi);font-weight:500}
 .reg-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:start;margin-top:2.4rem}
 .reg-info{display:grid;gap:1.4rem;align-content:start}
 .reg-fact{border:1px solid rgba(251,249,243,.18);border-radius:12px;padding:1.1rem 1.3rem;background:rgba(251,249,243,.05)}
@@ -291,7 +344,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
         <path d="M2 24c5 0 5-5 10-5s5 5 10 5 5-5 10-5 5 5 6 5" stroke="#4a89a8" stroke-width="1.4" fill="none"/>
         <path d="M2 30c5 0 5-4 10-4s5 4 10 4 5-4 10-4 5 4 6 4" stroke="#5b9e7e" stroke-width="1.4" fill="none"/>
       </svg>
-      <span>Taiwan-Japan Ecology Workshop</span>
+      <span>Taiwan–Japan Ecology Workshop</span>
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
@@ -310,19 +363,23 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
 
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
-  <h1 class="sr-only">2026 Taiwan-Japan Ecology Workshop, Academia Sinica, Taipei, 6 to 8 November 2026</h1>
+  <h1 class="sr-only">The 8th Taiwan–Japan Ecology Workshop, Academia Sinica, Taipei, 15 to 17 November 2026</h1>
   <div class="wrap">
+    <div class="hero-head">
+      <span class="eyebrow">Taiwan · Japan · Ecology</span>
+      <p class="hero-title" aria-hidden="true">The 8th Taiwan–Japan Ecology Workshop <span class="yr">2026</span></p>
+    </div>
     <img class="hero-art" src="key-visual.png"
-      alt="2026 Taiwan-Japan Ecology Workshop key visual: a Taiwan red-billed black bulbul perched on a bamboo stump above gold-lit mountain ranges, in the style of a Japanese gold-leaf landscape painting.">
+      alt="The 8th Taiwan–Japan Ecology Workshop key visual: a Taiwan red-billed black bulbul perched above gold-lit mountain ranges, in the style of a Japanese gold-leaf landscape painting.">
     <div class="hero-bar">
       <div class="hero-bar-meta">
         <span class="meta-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          <strong>6&ndash;8 November 2026</strong>
+          <strong>15&ndash;17 November 2026</strong>
         </span>
         <span class="meta-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <strong>Academia Sinica, Nangang, Taipei</strong>
+          <strong>IBMS Building, Academia Sinica, Taipei</strong>
         </span>
       </div>
       <div class="hero-bar-cta">
@@ -338,18 +395,30 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">About the workshop</span>
-      <h2 class="section-title">Two island ecologies, one conversation</h2>
+      <h2 class="section-title">A gathering that keeps growing</h2>
     </div>
     <div class="about-grid">
       <div class="about">
-        <p>Taiwan and Japan share mountains that rise steeply from warm seas, monsoon-driven seasons, and biotas shaped by the same currents and flyways. They also share a generation of ecologists asking how organisms adapt, cooperate, and shift their ranges as the climate warms.</p>
-        <p>This workshop brings together researchers from both countries for three days of talks, posters, and discussion across <strong>behavioral ecology, evolutionary genomics, macroecology, and conservation</strong>. The aim is simple: to turn parallel research programs into shared ones, and to seed collaborations that outlast the meeting.</p>
-        <p>Sessions are designed to leave room for conversation. Alongside keynote and contributed talks, the program includes a poster session, an early-career mixer, and an optional field excursion to one of the mountain sites that shape ecology on both sides of the strait.</p>
+        <p class="about-lede">Taiwan and Japan share mountains that rise steeply from warm seas, summers swept by typhoons, and biotas shaped by the same currents and flyways. We also share a generation of ecologists asking how organisms adapt, cooperate, and shift their ranges as the climate warms.</p>
+        <p>Welcome to a workshop that keeps on growing. As the long friendship between Taiwan and Japan continues to warm, this meeting — which we still fondly call a <strong>“workshop”</strong> — has grown with it, well beyond its original scale.</p>
+        <p>The program reflects that scale. Sessions span the breadth of ecology and evolution — including, but not limited to, <strong>behavioral ecology, population and community ecology, climate-change biology, macroecology, and evolutionary genomics</strong>. Groups wishing to go further are warmly encouraged to <strong>propose a symposium</strong> and open a deeper conversation between our two communities.</p>
+
+        <div class="symp-call">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M14 8.5a3.5 3.5 0 0 1 0 7M16.5 6a6.5 6.5 0 0 1 0 12"/></svg>
+          <div>
+            <span class="lbl">Call for symposium proposals</span>
+            Deadline <b>1 September 2026</b>. To propose a symposium, please email <a href="mailto:shensf@sinica.edu.tw">shensf@sinica.edu.tw</a>.
+          </div>
+        </div>
+
+        <div class="cover-note">
+          <b>On the cover.</b> The key visual is built on a 1938 photograph of <b>Yushan (Mt. Niitaka, 新高山)</b> by the Japanese photographer Okada Kōyō（岡田紅陽）, joined by the <b>red-billed black bulbul（紅嘴黑鵯）</b> — the bird of a Bunun legend recorded in Kano Tadao’s（鹿野忠雄）1941 book <i>Mountains, Clouds and the Aborigines</i>（山と雲と蕃人と）— together celebrating the bond between Taiwan and Japan.
+        </div>
       </div>
       <div class="facts">
         <dl>
-          <div><dt>Dates</dt><dd>6&ndash;8 November 2026<small>Friday to Sunday</small></dd></div>
-          <div><dt>Format</dt><dd>3-day workshop<small>Keynotes, talks, posters</small></dd></div>
+          <div><dt>Dates</dt><dd>15&ndash;17 November 2026<small>Sunday to Tuesday</small></dd></div>
+          <div><dt>Edition</dt><dd>8th workshop<small>Taiwan–Japan series</small></dd></div>
           <div><dt>Working language</dt><dd>English</dd></div>
           <div><dt>Host</dt><dd>Biodiversity Research Center<small>Academia Sinica, Taipei</small></dd></div>
         </dl>
@@ -384,7 +453,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
       </article>
       <article class="theme-card">
         <span class="theme-num">04</span>
-        <h3>Species on the move</h3>
+        <h3>Climate-change biology</h3>
         <p>Range shifts, thermal niches, and the conservation challenges of a warming climate for marine and terrestrial species alike.</p>
       </article>
       <article class="theme-card">
@@ -407,42 +476,48 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="section-head">
       <span class="eyebrow">Program</span>
       <h2 class="section-title">Three days, at a glance</h2>
-      <p class="lead">A draft schedule. Talk titles and speakers will be confirmed nearer the date. <span class="tbc">draft</span></p>
+      <p class="lead">Plenary lectures open each of the first two days and close the last; concurrent sessions, symposia and posters fill the days between. Titles and speakers will be confirmed nearer the date. <span class="tbc">draft</span><br><a href="taiwan-japan-ecology-workshop-program.html" style="color:var(--ai);text-decoration:underline;text-underline-offset:2px">See the full program →</a></p>
     </div>
 
     <div class="prog-tabs" role="tablist" aria-label="Program days">
-      <button class="prog-tab" role="tab" aria-selected="true" data-day="1">Day 1 &middot; Fri 6 Nov</button>
-      <button class="prog-tab" role="tab" aria-selected="false" data-day="2">Day 2 &middot; Sat 7 Nov</button>
-      <button class="prog-tab" role="tab" aria-selected="false" data-day="3">Day 3 &middot; Sun 8 Nov</button>
+      <button class="prog-tab" role="tab" aria-selected="true" data-day="1">Day 1 &middot; Sun 15 Nov</button>
+      <button class="prog-tab" role="tab" aria-selected="false" data-day="2">Day 2 &middot; Mon 16 Nov</button>
+      <button class="prog-tab" role="tab" aria-selected="false" data-day="3">Day 3 &middot; Tue 17 Nov</button>
     </div>
 
     <div class="prog-day active" data-day="1">
-      <div class="slot"><div class="slot-time">09:00</div><div class="slot-body"><h4>Registration &amp; coffee</h4><p>Lobby, Biodiversity Research Center</p></div></div>
-      <div class="slot"><div class="slot-time">09:30</div><div class="slot-body"><h4>Opening remarks</h4><p>Organizing committee &amp; BRC director</p></div></div>
-      <div class="slot keynote"><div class="slot-time">10:00</div><div class="slot-body"><h4>Keynote I</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot"><div class="slot-time">11:00</div><div class="slot-body"><h4>Session 1 &middot; Behavioral &amp; social evolution</h4><p>Contributed talks</p></div></div>
-      <div class="slot break"><div class="slot-time">12:30</div><div class="slot-body"><h4>Lunch</h4><p>Catered, on site</p></div></div>
-      <div class="slot"><div class="slot-time">14:00</div><div class="slot-body"><h4>Session 2 &middot; Evolutionary genomics</h4><p>Contributed talks</p></div></div>
-      <div class="slot break"><div class="slot-time">15:30</div><div class="slot-body"><h4>Poster session &amp; coffee</h4><p>With Taiwanese and Japanese groups</p></div></div>
-      <div class="slot"><div class="slot-time">17:00</div><div class="slot-body"><h4>Early-career mixer</h4><p>Students and postdocs</p></div></div>
+      <div class="slot"><div class="slot-time">11:00</div><div class="slot-body"><h4>Registration open</h4><p>Lobby, IBMS Building (until 17:00)</p></div></div>
+      <div class="slot"><div class="slot-time">13:00</div><div class="slot-body"><h4>Opening</h4><p>Welcome &amp; introductions</p></div></div>
+      <div class="slot keynote"><div class="slot-time">13:20</div><div class="slot-body"><h4>PL-1 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot keynote"><div class="slot-time">14:00</div><div class="slot-body"><h4>PL-2 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot break"><div class="slot-time">14:40</div><div class="slot-body"><h4>Coffee break</h4></div></div>
+      <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions (until 17:00)</p></div></div>
+      <div class="slot"><div class="slot-time">17:30</div><div class="slot-body"><h4>Poster session &amp; drinks &middot; P01–P61</h4><p>Posters open from 13:00; core time with free drinks 17:30–19:30</p></div></div>
     </div>
 
     <div class="prog-day" data-day="2">
-      <div class="slot keynote"><div class="slot-time">09:30</div><div class="slot-body"><h4>Keynote II</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot"><div class="slot-time">10:30</div><div class="slot-body"><h4>Session 3 &middot; Macroecology &amp; species on the move</h4><p>Contributed talks</p></div></div>
-      <div class="slot break"><div class="slot-time">12:00</div><div class="slot-body"><h4>Lunch</h4><p>Catered, on site</p></div></div>
-      <div class="slot"><div class="slot-time">13:30</div><div class="slot-body"><h4>Session 4 &middot; Community ecology &amp; theory</h4><p>Contributed talks</p></div></div>
-      <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><h4>Panel &middot; Building Taiwan-Japan collaborations</h4><p>Open discussion</p></div></div>
-      <div class="slot"><div class="slot-time">16:30</div><div class="slot-body"><h4>Closing remarks &amp; next steps</h4><p>Organizing committee</p></div></div>
-      <div class="slot break"><div class="slot-time">18:00</div><div class="slot-body"><h4>Workshop dinner</h4><p>Optional, sign-up on registration</p></div></div>
+      <div class="slot"><div class="slot-time">08:30</div><div class="slot-body"><h4>Registration open</h4><p>Lobby, IBMS Building (until 18:00)</p></div></div>
+      <div class="slot keynote"><div class="slot-time">09:00</div><div class="slot-body"><h4>PL-3 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot keynote"><div class="slot-time">09:40</div><div class="slot-body"><h4>PL-4 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot break"><div class="slot-time">10:20</div><div class="slot-body"><h4>Coffee break</h4></div></div>
+      <div class="slot"><div class="slot-time">10:40</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions</p></div></div>
+      <div class="slot break"><div class="slot-time">12:40</div><div class="slot-body"><h4>Lunch</h4></div></div>
+      <div class="slot"><div class="slot-time">14:00</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions</p></div></div>
+      <div class="slot"><div class="slot-time">16:00</div><div class="slot-body"><h4>Announcement</h4><p>Host of the next Taiwan–Japan Ecology Workshop</p></div></div>
+      <div class="slot"><div class="slot-time">16:20</div><div class="slot-body"><h4>Poster session &amp; drinks &middot; PA01–PA71</h4><p>Core time with free drinks (until 18:00)</p></div></div>
+      <div class="slot break"><div class="slot-time">19:00</div><div class="slot-body"><h4>Banquet</h4><p>19:00–21:00</p></div></div>
     </div>
 
     <div class="prog-day" data-day="3">
-      <div class="slot"><div class="slot-time">08:30</div><div class="slot-body"><h4>Depart for field excursion</h4><p>Optional, advance sign-up required</p></div></div>
-      <div class="slot keynote"><div class="slot-time">09:30</div><div class="slot-body"><h4>Yangmingshan National Park</h4><p>Guided walk through a montane study site near Taipei</p></div></div>
-      <div class="slot break"><div class="slot-time">12:30</div><div class="slot-body"><h4>Lunch in the field</h4><p>Boxed lunch provided</p></div></div>
-      <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><h4>Return to Academia Sinica</h4><p>Arrival by mid-afternoon</p></div></div>
-      <div class="slot"><div class="slot-time">16:00</div><div class="slot-body"><h4>Informal wrap-up &amp; farewells</h4><p>Open to all participants</p></div></div>
+      <div class="slot"><div class="slot-time">08:30</div><div class="slot-body"><h4>Registration open</h4><p>Lobby, IBMS Building (until 15:00)</p></div></div>
+      <div class="slot"><div class="slot-time">09:00</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions</p></div></div>
+      <div class="slot break"><div class="slot-time">11:00</div><div class="slot-body"><h4>Coffee break</h4></div></div>
+      <div class="slot"><div class="slot-time">11:20</div><div class="slot-body"><h4>Symposia</h4><p>Parallel symposium sessions</p></div></div>
+      <div class="slot break"><div class="slot-time">13:00</div><div class="slot-body"><h4>Lunch</h4></div></div>
+      <div class="slot keynote"><div class="slot-time">14:00</div><div class="slot-body"><h4>PL-5 &middot; Closing lecture</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot keynote"><div class="slot-time">14:40</div><div class="slot-body"><h4>PL-6 &middot; Closing lecture</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot"><div class="slot-time">15:20</div><div class="slot-body"><h4>Award ceremony</h4></div></div>
+      <div class="slot"><div class="slot-time">16:10</div><div class="slot-body"><h4>Closing remarks</h4></div></div>
     </div>
   </div>
 </section>
@@ -452,8 +527,8 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Speakers</span>
-      <h2 class="section-title">Invited speakers</h2>
-      <p class="lead">The invited line-up is being finalized. <span class="tbc">to be announced</span></p>
+      <h2 class="section-title">Plenary &amp; closing lectures</h2>
+      <p class="lead">Six lectures open and close the meeting. The line-up is being finalized. <span class="tbc">to be announced</span></p>
     </div>
     <div class="spk-grid">
       <div class="spk"><div class="spk-photo">了</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Taiwan</span></div>
@@ -473,15 +548,15 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     </div>
     <div class="venue-grid venue">
       <div>
-        <h3>Biodiversity Research Center</h3>
-        <p>128 Academia Road, Section 2, Nankang District, Taipei 115, Taiwan<br>中央研究院 生物多樣性研究中心</p>
+        <h3>B1C Auditorium, IBMS Building</h3>
+        <p>The workshop is held at the <strong>B1C Auditorium</strong>, Institute of Biomedical Sciences (IBMS) Building, Academia Sinica（中央研究院）. Concurrent sessions and posters are held in the adjacent Interdisciplinary Research Building（跨領域研究大樓）.<br>128 Academia Road, Section 2, Nangang District, Taipei 115, Taiwan</p>
         <ul>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="16" rx="3"/><path d="M4 11h16M8 19l-2 2M16 19l2 2"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg><span><strong>By MRT:</strong> Take the Bannan Line (blue) to Nangang Exhibition Center, then bus or taxi (about 10 minutes) to Academia Sinica.</span></li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14M6 17V9l2-4h8l2 4v8M8 21v-2M16 21v-2"/><circle cx="8.5" cy="13.5" r="1"/><circle cx="15.5" cy="13.5" r="1"/></svg><span><strong>By bus:</strong> Routes 212, 270, and 小12 stop at the Academia Sinica gate.</span></li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12l3-7h14l3 7v6h-3M5 18H2v-6M7 18h10M6 18a2 2 0 1 0 4 0M14 18a2 2 0 1 0 4 0"/></svg><span><strong>From TPE / TSA airports:</strong> Roughly 45 minutes by taxi from Taoyuan, 25 minutes from Songshan.</span></li>
         </ul>
       </div>
-      <a class="venue-card map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Academia+Sinica+Taipei" target="_blank" rel="noopener">
+      <a class="venue-card map-link" href="https://maps.app.goo.gl/NExhFtp3LLSe3PATA" target="_blank" rel="noopener">
         <div class="map-visual">
           <svg class="contours" viewBox="0 0 400 250" fill="none" stroke="currentColor" stroke-width="1.4" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <path d="M40,212 C120,150 184,250 280,182 S420,124 472,170"/>
@@ -494,7 +569,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
           </span>
         </div>
         <div class="map-cta">
-          <span class="addr">Academia Sinica, Nangang, Taipei</span>
+          <span class="addr">IBMS Building, Academia Sinica（中研院 生醫所）</span>
           <span class="map-open">Open in Google Maps
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </span>
@@ -510,7 +585,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="section-head">
       <span class="eyebrow">Registration fees</span>
       <h2 class="section-title">Fees</h2>
-      <p class="lead">Early bird rates apply to payments received by 10 October 2026. The regular rate applies after that date.</p>
+      <p class="lead">Early-bird rates apply to payments received by <strong>15 September 2026</strong>; the regular rate applies afterwards, until registration closes on <strong>1 October 2026</strong>. Capacity is limited to 200 participants (50 places reserved for the delegation from Japan), on a first-come, first-served basis.</p>
     </div>
     <div class="fee-wrap">
       <div class="fee-card">
@@ -518,8 +593,8 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
           <thead>
             <tr>
               <th>Registration</th>
-              <th>Early bird<small>by 10 Oct</small></th>
-              <th>Regular<small>after 10 Oct</small></th>
+              <th>Early bird<small>by 15 Sep</small></th>
+              <th>Regular<small>by 1 Oct</small></th>
             </tr>
           </thead>
           <tbody>
@@ -550,16 +625,29 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="section-head">
       <span class="eyebrow">Registration</span>
       <h2 class="section-title">Reserve your place</h2>
-      <p class="lead">Complete the form below to register and submit an abstract. Registration fees are listed above; payment is by bank transfer or credit card.</p>
+      <p class="lead">Please complete your payment first, then fill out the form below to register and submit an abstract. The abstract deadline is 15 September; registration closes 1 October 2026. Payment is by bank transfer (for registrants from Taiwan) or credit card (for registrants from Japan).</p>
+
+      <p class="cap-note">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg>
+        <span><strong>Places are limited by the venue.</strong> Registration is capped at <strong>200 participants</strong> — 50 places reserved for the delegation from Japan — on a <strong>first-come, first-served</strong> basis. Early registration is strongly encouraged.</span>
+      </p>
     </div>
 
     <div class="reg-grid">
       <div class="reg-info">
-        <dl class="reg-fact"><dt>Registration deadline</dt><dd>To be announced<small>opens summer 2026</small></dd></dl>
-        <dl class="reg-fact"><dt>Abstract deadline</dt><dd>To be announced<small>for talks &amp; posters</small></dd></dl>
+        <dl class="reg-fact"><dt>Registration deadline</dt><dd>1 October 2026<small>register before this date</small></dd></dl>
+        <dl class="reg-fact"><dt>Abstract deadline</dt><dd>15 September 2026<small>for talks &amp; posters</small></dd></dl>
+        <dl class="reg-fact"><dt>Early bird</dt><dd>By 15 September 2026<small>early-bird rate deadline</small></dd></dl>
+        <dl class="reg-fact accom-fact">
+          <dt>Accommodation</dt>
+          <dd>Academic Activity Center
+            <small>A reserved block at the Academia Sinica Academic Activity Center（學術活動中心）, a short walk from the venue — a special workshop rate, well below the public rate.<br>Single NT$1,100 · Double NT$1,400 per night (check-in 15 Nov, check-out 18 Nov 2026). 40 rooms in total — 20 reserved for participants from Japan; request one in the form and pay at check-out. <a href="https://dga.sinica.edu.tw/posts/78730" target="_blank" rel="noopener">Activity Center details ↗</a></small>
+          </dd>
+        </dl>
         <dl class="reg-fact bank-info">
           <dt>匯款資訊</dt>
           <dd>
+            <span style="color:#bcdcec;font-weight:500;margin-bottom:.45rem">台灣報名者請以匯款方式繳費 · For registrants from Taiwan</span>
             <span><strong>銀行名稱：</strong>012 台北富邦銀行</span>
             <span><strong>銀行分行名稱：</strong>南港分行</span>
             <span><strong>戶名：</strong>社團法人中華民國自然生態保育協會</span>
@@ -570,7 +658,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
           <dt>Credit card</dt>
           <dd>
             <a class="pay-btn" href="checkout.html">Pay by credit card</a>
-            <span class="pay-note">Choose your items on the payment page.</span>
+            <span class="pay-note">供日本報名者使用 · For registrants from Japan. Choose your items on the payment page.</span>
           </dd>
         </dl>
       </div>
@@ -586,9 +674,10 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
       <!--  </div>                                                       -->
       <!-- ============================================================= -->
       <div class="form-embed">
+        <p class="form-notice">⚠️ 請先完成繳費，再填寫此表單 · Please complete payment before filling out this form.</p>
         <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeDI8cuB3XJ1Mvt29uOTO5bXlC7E7jYj0-MR0bleW1gYF5ziA/viewform?embedded=true"
-          title="2026 Taiwan-Japan Ecology Workshop registration form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLScptzMyu3bT2d4GqH_GUMKk3CpyMrWbFKO7PiYqiZMcwvm-CA/viewform?embedded=true"
+          title="The 8th Taiwan–Japan Ecology Workshop registration form"
           loading="lazy">Loading…</iframe>
       </div>
     </div>
@@ -605,10 +694,8 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="org-grid">
       <div class="org-list">
         <div class="org-item"><span class="role">Host institute</span><span class="name">Biodiversity Research Center<small>Academia Sinica, Taipei</small></span></div>
-        <div class="org-item"><span class="role">Chair</span><span class="name">To be confirmed<small>Organizing committee</small></span></div>
-        <div class="org-item"><span class="role">Taiwan committee</span><span class="name">To be confirmed</span></div>
-        <div class="org-item"><span class="role">Japan committee</span><span class="name">To be confirmed</span></div>
-        <div class="org-item"><span class="role">Secretariat</span><span class="name">To be confirmed</span></div>
+        <div class="org-item"><span class="role">Chair</span><span class="name"><a href="https://brcasesslab.wordpress.com/" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:2px">Sheng-Feng Shen</a><small>Biodiversity Research Center, Academia Sinica</small></span></div>
+        <div class="org-item"><span class="role">Secretariat</span><span class="name">Tzi-Yuan Wang</span></div>
       </div>
       <div class="contact-card">
         <h3>Contact</h3>
@@ -622,7 +709,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
         </div>
         <div class="contact-row">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
-          <a href="#top">www.example.org/workshop</a>
+          <a href="https://biodiv.tw/" target="_blank" rel="noopener">biodiv.tw</a>
         </div>
         <p style="margin-top:1rem;font-size:.85rem;color:var(--muted)">For questions about abstracts, travel, or registration, please email the secretariat.</p>
       </div>
@@ -635,9 +722,9 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   <div class="wrap foot-inner">
     <div class="foot-brand">
       <svg width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="#1f3a5f" stroke-width="1.4"/><path d="M2 24c5 0 5-5 10-5s5 5 10 5 5-5 10-5 5 5 6 5" stroke="#4a89a8" stroke-width="1.4"/></svg>
-      <span>Taiwan-Japan Ecology Workshop 2026</span>
+      <span>The 8th Taiwan–Japan Ecology Workshop · 2026</span>
     </div>
-    <p>Hosted at the Biodiversity Research Center, Academia Sinica &middot; Taipei, Taiwan</p>
+    <p>Hosted by the Biodiversity Research Center, Academia Sinica &middot; Taipei, Taiwan &middot; 15&ndash;17 November 2026</p>
   </div>
 </footer>
 
