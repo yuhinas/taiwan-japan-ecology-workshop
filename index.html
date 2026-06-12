@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Taiwan-Japan Ecology Workshop · Academia Sinica, Taipei</title>
+<meta name="description" content="A three-day workshop bringing together ecologists from Taiwan and Japan at the Biodiversity Research Center, Academia Sinica, Taipei, 6 to 8 November 2026.">
+<meta property="og:title" content="2026 Taiwan-Japan Ecology Workshop">
+<meta property="og:description" content="Academia Sinica, Taipei · 6 to 8 November 2026">
+<meta property="og:image" content="key-visual.png">
+<meta property="og:type" content="website">
+
+<!-- ===================== FONTS ===================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===================== TOKENS ===================== */
+:root{
+  --konjo:   #1f3a5f;   /* 紺青  deep indigo - primary structure */
+  --ai:      #2d5a7b;   /* 藍    indigo */
+  --hanada:  #4a89a8;   /* 縹    light indigo */
+  --wakatake:#5b9e7e;   /* 若竹  bamboo green - ecology accent */
+  --yamabuki:#cf9023;   /* 山吹  gold - rare warm accent */
+  --kinari:  #f6f2e9;   /* 生成り paper - page background */
+  --washi:   #fbf9f3;   /* 和紙  lighter paper - cards */
+  --sumi:    #1b2430;   /* 墨    ink - text */
+  --muted:   #5a6573;   /* secondary text */
+  --line:    rgba(31,58,95,.14);
+  --line-2:  rgba(31,58,95,.08);
+
+  --maxw: 1120px;
+  --display: "Shippori Mincho", "Noto Serif TC", serif;
+  --body: "Zen Kaku Gothic New", "Noto Sans TC", system-ui, sans-serif;
+}
+
+/* ===================== RESET ===================== */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+body{
+  font-family:var(--body);
+  background:var(--kinari);
+  color:var(--sumi);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2.5px solid var(--yamabuki);outline-offset:3px;border-radius:2px}
+
+/* ===================== TYPE SCALE ===================== */
+.eyebrow{
+  font-family:var(--body);
+  font-weight:500;
+  font-size:.74rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--hanada);
+}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.18;color:var(--konjo);letter-spacing:.01em}
+.section-title{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:.4rem}
+.lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+
+/* ===================== LAYOUT ===================== */
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1.2rem,5vw,2.4rem)}
+section{padding-block:clamp(3.6rem,7vw,6rem)}
+.section-head{margin-bottom:2.6rem;max-width:64ch}
+
+/* ===================== NAV ===================== */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(246,242,233,.82);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-2);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:66px}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;color:var(--konjo);font-size:1.04rem;letter-spacing:.01em}
+.brand .mark{width:26px;height:26px;flex:none}
+.nav-links{display:flex;align-items:center;gap:1.7rem}
+.nav-links a{font-size:.92rem;color:var(--ai);font-weight:500;position:relative;padding-block:.3rem}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--yamabuki);transition:width .25s ease}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--body);font-weight:500;font-size:.92rem;letter-spacing:.01em;
+  padding:.62rem 1.25rem;border-radius:999px;cursor:pointer;border:1px solid transparent;
+  transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+.btn-primary{background:var(--konjo);color:#fbf9f3}
+.btn-primary:hover{background:var(--ai);transform:translateY(-1px);box-shadow:0 8px 20px -10px rgba(31,58,95,.6)}
+.btn-ghost{background:transparent;color:var(--konjo);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--konjo);background:rgba(31,58,95,.04)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--konjo);margin:4px 0;transition:.25s}
+
+/* ===================== HERO ===================== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hero{padding-top:clamp(1.4rem,3.2vw,2.6rem);padding-bottom:0}
+.hero-art{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);
+  box-shadow:0 34px 80px -38px rgba(31,58,95,.6)}
+.hero-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 1.6rem;
+  margin-top:1.7rem;padding-top:1.4rem;border-top:2px solid var(--yamabuki)}
+.hero-bar-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem}
+.meta-item{display:flex;align-items:center;gap:.55rem;font-size:1.02rem;color:var(--sumi)}
+.meta-item svg{flex:none;color:var(--hanada)}
+.meta-item strong{font-weight:500}
+.hero-bar-cta{display:flex;gap:.7rem}
+.hero-bar-cta .btn{padding:.7rem 1.5rem;font-size:.96rem}
+.tbc{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yamabuki);border:1px solid currentColor;border-radius:999px;padding:.1rem .5rem;margin-left:.1rem}
+
+/* ===================== ABOUT ===================== */
+.about-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:start}
+.about p + p{margin-top:1.1rem}
+.about p{color:var(--muted);font-size:1.04rem}
+.about strong{color:var(--sumi);font-weight:500}
+.facts{border:1px solid var(--line);border-radius:14px;background:var(--washi);padding:1.6rem 1.7rem}
+.facts dl{display:grid;gap:1.05rem}
+.facts dt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hanada);font-weight:500}
+.facts dd{font-family:var(--display);font-size:1.12rem;color:var(--konjo);margin-top:.15rem}
+.facts dd small{font-family:var(--body);font-size:.85rem;color:var(--muted);display:block;font-weight:400}
+
+/* ===================== THEMES ===================== */
+.themes{background:var(--washi);border-block:1px solid var(--line-2)}
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.theme-card{
+  border:1px solid var(--line);border-radius:14px;background:var(--kinari);
+  padding:1.5rem 1.5rem 1.6rem;position:relative;
+  transition:transform .2s ease, box-shadow .25s ease, border-color .2s ease;
+}
+.theme-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(31,58,95,.4);border-color:var(--hanada)}
+.theme-num{font-family:var(--display);font-size:.85rem;color:var(--wakatake);font-weight:700;letter-spacing:.08em}
+.theme-card h3{font-size:1.18rem;margin:.5rem 0 .5rem}
+.theme-card p{font-size:.95rem;color:var(--muted);line-height:1.55}
+
+/* ===================== PROGRAM ===================== */
+.prog-tabs{display:flex;gap:.5rem;margin-bottom:1.8rem;flex-wrap:wrap}
+.prog-tab{
+  font-family:var(--body);font-size:.9rem;font-weight:500;cursor:pointer;
+  padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--washi);color:var(--ai);
+  transition:.2s;
+}
+.prog-tab[aria-selected="true"]{background:var(--konjo);color:var(--washi);border-color:var(--konjo)}
+.prog-day{display:none}
+.prog-day.active{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.slot{display:grid;grid-template-columns:118px 1fr;gap:1.3rem;padding:1rem 0;border-top:1px solid var(--line)}
+.slot:last-child{border-bottom:1px solid var(--line)}
+.slot-time{font-family:var(--display);color:var(--ai);font-size:1rem;font-weight:600;white-space:nowrap}
+.slot-body h4{font-family:var(--body);font-weight:700;font-size:1.02rem;color:var(--sumi);margin-bottom:.15rem}
+.slot-body p{font-size:.92rem;color:var(--muted)}
+.slot.keynote .slot-body h4{color:var(--konjo)}
+.slot.break .slot-body h4{color:var(--wakatake);font-weight:500}
+
+/* ===================== SPEAKERS ===================== */
+.speakers{background:var(--washi);border-block:1px solid var(--line-2)}
+.spk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.spk{text-align:center}
+.spk-photo{width:100%;aspect-ratio:1;border-radius:14px;background:linear-gradient(150deg,var(--hanada),var(--konjo));display:grid;place-items:center;color:rgba(255,255,255,.55);font-family:var(--display);font-size:1.6rem;border:1px solid var(--line)}
+.spk h4{font-family:var(--display);font-size:1.08rem;color:var(--konjo);margin-top:.85rem}
+.spk p{font-size:.85rem;color:var(--muted);margin-top:.1rem}
+.spk .flag{font-size:.72rem;letter-spacing:.1em;color:var(--wakatake);text-transform:uppercase;margin-top:.3rem}
+
+/* ===================== VENUE ===================== */
+.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;align-items:center}
+.venue-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--washi)}
+.venue-map{aspect-ratio:16/10;width:100%;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
+.venue h3{font-size:1.3rem;margin-bottom:.6rem}
+.venue p{color:var(--muted);margin-bottom:.9rem}
+.venue ul{list-style:none;display:grid;gap:.7rem;margin-top:1.2rem}
+.venue li{display:flex;gap:.7rem;font-size:.96rem}
+.venue li svg{flex:none;color:var(--hanada);margin-top:.2rem}
+.map-link{display:block;overflow:hidden;transition:box-shadow .25s ease, transform .2s ease}
+.map-link:hover{box-shadow:0 18px 40px -24px rgba(31,58,95,.5);transform:translateY(-2px)}
+.map-visual{position:relative;aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(130% 130% at 28% 18%, #eef3f3, #dde7ea 58%, #cddde2)}
+.map-visual .contours{position:absolute;inset:0;width:100%;height:100%;color:var(--hanada);opacity:.35}
+.map-pin{position:relative;z-index:2;width:46px;height:46px;border-radius:50%;background:var(--konjo);
+  display:grid;place-items:center;color:#fff;box-shadow:0 10px 22px -8px rgba(31,58,95,.75)}
+.map-cta{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.05rem 1.3rem;background:var(--washi);border-top:1px solid var(--line)}
+.map-cta .addr{font-family:var(--display);color:var(--konjo);font-size:1rem}
+.map-open{display:inline-flex;align-items:center;gap:.4rem;font-size:.88rem;color:var(--ai);font-weight:500;white-space:nowrap}
+.map-link:hover .map-open{color:var(--konjo)}
+
+/* ===================== REGISTER ===================== */
+.register{background:var(--konjo);color:var(--washi);position:relative;overflow:hidden}
+.register::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 80% at 90% -10%, rgba(74,137,168,.45), transparent 60%),
+  radial-gradient(90% 70% at -10% 110%, rgba(91,158,126,.35), transparent 60%);pointer-events:none}
+.register .wrap{position:relative;z-index:1}
+.register .eyebrow{color:#bcdcec}
+.register h2{color:var(--washi)}
+.register .lead{color:rgba(251,249,243,.8)}
+.reg-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:start;margin-top:2.4rem}
+.reg-info{display:grid;gap:1.4rem;align-content:start}
+.reg-fact{border:1px solid rgba(251,249,243,.18);border-radius:12px;padding:1.1rem 1.3rem;background:rgba(251,249,243,.05)}
+.reg-fact dt{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#bcdcec;margin-bottom:.3rem}
+.reg-fact dd{font-family:var(--display);font-size:1.22rem;color:var(--washi)}
+.reg-fact dd small{display:block;font-family:var(--body);font-size:.82rem;color:rgba(251,249,243,.7);font-weight:400;margin-top:.15rem}
+
+/* form embed area */
+.form-embed{background:var(--washi);border-radius:16px;padding:.55rem;box-shadow:0 24px 60px -30px rgba(0,0,0,.6)}
+.form-embed iframe{width:100%;border:0;border-radius:12px;display:block;min-height:760px;background:var(--washi)}
+.form-placeholder{
+  min-height:440px;border:1.5px dashed var(--line);border-radius:12px;
+  display:grid;place-items:center;text-align:center;padding:2.5rem 1.5rem;color:var(--muted);background:var(--kinari);
+}
+.form-placeholder .ph-mark{width:46px;height:46px;color:var(--hanada);margin-inline:auto;margin-bottom:1rem}
+.form-placeholder h4{font-family:var(--display);color:var(--konjo);font-size:1.2rem;margin-bottom:.5rem}
+.form-placeholder p{font-size:.93rem;max-width:38ch;margin-inline:auto}
+.form-placeholder code{background:rgba(31,58,95,.08);padding:.1rem .4rem;border-radius:5px;font-size:.85em;color:var(--ai)}
+
+/* ===================== ORGANIZERS ===================== */
+.org-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.org-list{display:grid;gap:1.1rem}
+.org-item{display:flex;gap:.9rem;align-items:baseline}
+.org-item .role{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--hanada);min-width:120px;flex:none;padding-top:.2rem}
+.org-item .name{font-family:var(--display);color:var(--konjo);font-size:1.05rem}
+.org-item .name small{display:block;font-family:var(--body);font-size:.85rem;color:var(--muted);font-weight:400}
+.contact-card{border:1px solid var(--line);border-radius:16px;background:var(--washi);padding:1.8rem}
+.contact-card h3{font-size:1.2rem;margin-bottom:1rem}
+.contact-row{display:flex;gap:.7rem;align-items:center;padding:.55rem 0;font-size:.97rem;color:var(--sumi)}
+.contact-row svg{flex:none;color:var(--hanada)}
+.contact-row a:hover{color:var(--ai);text-decoration:underline}
+
+/* ===================== FOOTER ===================== */
+footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.6rem}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.foot-brand{display:flex;align-items:center;gap:.6rem;font-family:var(--display);color:var(--konjo);font-weight:600}
+.foot-inner p{font-size:.85rem;color:var(--muted)}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:900px){
+  .nav-links{
+    position:fixed;inset:66px 0 auto 0;background:var(--kinari);flex-direction:column;
+    align-items:flex-start;gap:0;padding:.5rem 1.4rem 1.4rem;border-bottom:1px solid var(--line);
+    transform:translateY(-120%);transition:transform .3s ease;box-shadow:0 20px 40px -28px rgba(0,0,0,.4)
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{width:100%;padding:.85rem 0;border-bottom:1px solid var(--line-2)}
+  .nav-links .btn{margin-top:.8rem}
+  .nav-toggle{display:block}
+  .about-grid,.venue-grid,.reg-grid,.org-grid{grid-template-columns:1fr}
+  .theme-grid{grid-template-columns:1fr 1fr}
+  .spk-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .theme-grid,.spk-grid{grid-template-columns:1fr}
+  .slot{grid-template-columns:1fr;gap:.3rem}
+  .hero-cta .btn{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Taiwan-Japan Ecology Workshop home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#1f3a5f" stroke-width="1.4"/>
+        <path d="M2 24c5 0 5-5 10-5s5 5 10 5 5-5 10-5 5 5 6 5" stroke="#4a89a8" stroke-width="1.4" fill="none"/>
+        <path d="M2 30c5 0 5-4 10-4s5 4 10 4 5-4 10-4 5 4 6 4" stroke="#5b9e7e" stroke-width="1.4" fill="none"/>
+      </svg>
+      <span>Taiwan-Japan Ecology Workshop</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#themes">Themes</a>
+      <a href="#program">Program</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#venue">Venue</a>
+      <a class="btn btn-primary" href="#register">Register</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <h1 class="sr-only">2026 Taiwan-Japan Ecology Workshop, Academia Sinica, Taipei, 6 to 8 November 2026</h1>
+  <div class="wrap">
+    <img class="hero-art" src="key-visual.png"
+      alt="2026 Taiwan-Japan Ecology Workshop key visual: a Taiwan red-billed black bulbul perched on a bamboo stump above gold-lit mountain ranges, in the style of a Japanese gold-leaf landscape painting.">
+    <div class="hero-bar">
+      <div class="hero-bar-meta">
+        <span class="meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <strong>6&ndash;8 November 2026</strong>
+        </span>
+        <span class="meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <strong>Academia Sinica, Nangang, Taipei</strong>
+        </span>
+      </div>
+      <div class="hero-bar-cta">
+        <a class="btn btn-primary" href="#register">Register</a>
+        <a class="btn btn-ghost" href="#program">Program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About the workshop</span>
+      <h2 class="section-title">Two island ecologies, one conversation</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about">
+        <p>Taiwan and Japan share mountains that rise steeply from warm seas, monsoon-driven seasons, and biotas shaped by the same currents and flyways. They also share a generation of ecologists asking how organisms adapt, cooperate, and shift their ranges as the climate warms.</p>
+        <p>This workshop brings together researchers from both countries for three days of talks, posters, and discussion across <strong>behavioral ecology, evolutionary genomics, macroecology, and conservation</strong>. The aim is simple: to turn parallel research programs into shared ones, and to seed collaborations that outlast the meeting.</p>
+        <p>Sessions are designed to leave room for conversation. Alongside keynote and contributed talks, the program includes a poster session, an early-career mixer, and an optional field excursion to one of the mountain sites that shape ecology on both sides of the strait.</p>
+      </div>
+      <div class="facts">
+        <dl>
+          <div><dt>Dates</dt><dd>6&ndash;8 November 2026<small>Friday to Sunday</small></dd></div>
+          <div><dt>Format</dt><dd>3-day workshop<small>Keynotes, talks, posters</small></dd></div>
+          <div><dt>Working language</dt><dd>English</dd></div>
+          <div><dt>Host</dt><dd>Biodiversity Research Center<small>Academia Sinica, Taipei</small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THEMES ===================== -->
+<section id="themes" class="themes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Scientific themes</span>
+      <h2 class="section-title">What we will talk about</h2>
+      <p class="lead">Six threads running through both countries' research, chosen because they invite direct comparison across the Taiwan-Japan gradient.</p>
+    </div>
+    <div class="theme-grid">
+      <article class="theme-card">
+        <span class="theme-num">01</span>
+        <h3>Behavioral &amp; social evolution</h3>
+        <p>Cooperation, breeding systems, and social structure, from insects to vertebrates, and the ecological conditions that favor them.</p>
+      </article>
+      <article class="theme-card">
+        <span class="theme-num">02</span>
+        <h3>Evolutionary genomics</h3>
+        <p>Genomic architecture of adaptation, including structural variants, supergenes, and the genetics of complex traits.</p>
+      </article>
+      <article class="theme-card">
+        <span class="theme-num">03</span>
+        <h3>Macroecology &amp; biogeography</h3>
+        <p>Elevational and latitudinal gradients, range dynamics, and how diversity is distributed across two mountainous archipelagos.</p>
+      </article>
+      <article class="theme-card">
+        <span class="theme-num">04</span>
+        <h3>Species on the move</h3>
+        <p>Range shifts, thermal niches, and the conservation challenges of a warming climate for marine and terrestrial species alike.</p>
+      </article>
+      <article class="theme-card">
+        <span class="theme-num">05</span>
+        <h3>Community &amp; ecosystem ecology</h3>
+        <p>Species interactions, coexistence, and the processes that assemble and maintain communities through time.</p>
+      </article>
+      <article class="theme-card">
+        <span class="theme-num">06</span>
+        <h3>Theory &amp; methods</h3>
+        <p>Models, simulation, and computational approaches that connect mechanism to pattern across scales.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROGRAM ===================== -->
+<section id="program">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Program</span>
+      <h2 class="section-title">Three days, at a glance</h2>
+      <p class="lead">A draft schedule. Talk titles and speakers will be confirmed nearer the date. <span class="tbc">draft</span></p>
+    </div>
+
+    <div class="prog-tabs" role="tablist" aria-label="Program days">
+      <button class="prog-tab" role="tab" aria-selected="true" data-day="1">Day 1 &middot; Fri 6 Nov</button>
+      <button class="prog-tab" role="tab" aria-selected="false" data-day="2">Day 2 &middot; Sat 7 Nov</button>
+      <button class="prog-tab" role="tab" aria-selected="false" data-day="3">Day 3 &middot; Sun 8 Nov</button>
+    </div>
+
+    <div class="prog-day active" data-day="1">
+      <div class="slot"><div class="slot-time">09:00</div><div class="slot-body"><h4>Registration &amp; coffee</h4><p>Lobby, Biodiversity Research Center</p></div></div>
+      <div class="slot"><div class="slot-time">09:30</div><div class="slot-body"><h4>Opening remarks</h4><p>Organizing committee &amp; BRC director</p></div></div>
+      <div class="slot keynote"><div class="slot-time">10:00</div><div class="slot-body"><h4>Keynote I</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot"><div class="slot-time">11:00</div><div class="slot-body"><h4>Session 1 &middot; Behavioral &amp; social evolution</h4><p>Contributed talks</p></div></div>
+      <div class="slot break"><div class="slot-time">12:30</div><div class="slot-body"><h4>Lunch</h4><p>Catered, on site</p></div></div>
+      <div class="slot"><div class="slot-time">14:00</div><div class="slot-body"><h4>Session 2 &middot; Evolutionary genomics</h4><p>Contributed talks</p></div></div>
+      <div class="slot break"><div class="slot-time">15:30</div><div class="slot-body"><h4>Poster session &amp; coffee</h4><p>With Taiwanese and Japanese groups</p></div></div>
+      <div class="slot"><div class="slot-time">17:00</div><div class="slot-body"><h4>Early-career mixer</h4><p>Students and postdocs</p></div></div>
+    </div>
+
+    <div class="prog-day" data-day="2">
+      <div class="slot keynote"><div class="slot-time">09:30</div><div class="slot-body"><h4>Keynote II</h4><p>Speaker to be announced</p></div></div>
+      <div class="slot"><div class="slot-time">10:30</div><div class="slot-body"><h4>Session 3 &middot; Macroecology &amp; species on the move</h4><p>Contributed talks</p></div></div>
+      <div class="slot break"><div class="slot-time">12:00</div><div class="slot-body"><h4>Lunch</h4><p>Catered, on site</p></div></div>
+      <div class="slot"><div class="slot-time">13:30</div><div class="slot-body"><h4>Session 4 &middot; Community ecology &amp; theory</h4><p>Contributed talks</p></div></div>
+      <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><h4>Panel &middot; Building Taiwan-Japan collaborations</h4><p>Open discussion</p></div></div>
+      <div class="slot"><div class="slot-time">16:30</div><div class="slot-body"><h4>Closing remarks &amp; next steps</h4><p>Organizing committee</p></div></div>
+      <div class="slot break"><div class="slot-time">18:00</div><div class="slot-body"><h4>Workshop dinner</h4><p>Optional, sign-up on registration</p></div></div>
+    </div>
+
+    <div class="prog-day" data-day="3">
+      <div class="slot"><div class="slot-time">08:30</div><div class="slot-body"><h4>Depart for field excursion</h4><p>Optional, advance sign-up required</p></div></div>
+      <div class="slot keynote"><div class="slot-time">09:30</div><div class="slot-body"><h4>Yangmingshan National Park</h4><p>Guided walk through a montane study site near Taipei</p></div></div>
+      <div class="slot break"><div class="slot-time">12:30</div><div class="slot-body"><h4>Lunch in the field</h4><p>Boxed lunch provided</p></div></div>
+      <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><h4>Return to Academia Sinica</h4><p>Arrival by mid-afternoon</p></div></div>
+      <div class="slot"><div class="slot-time">16:00</div><div class="slot-body"><h4>Informal wrap-up &amp; farewells</h4><p>Open to all participants</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPEAKERS ===================== -->
+<section id="speakers" class="speakers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Speakers</span>
+      <h2 class="section-title">Invited speakers</h2>
+      <p class="lead">The invited line-up is being finalized. <span class="tbc">to be announced</span></p>
+    </div>
+    <div class="spk-grid">
+      <div class="spk"><div class="spk-photo">了</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Taiwan</span></div>
+      <div class="spk"><div class="spk-photo">海</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Japan</span></div>
+      <div class="spk"><div class="spk-photo">山</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Taiwan</span></div>
+      <div class="spk"><div class="spk-photo">波</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Japan</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VENUE ===================== -->
+<section id="venue">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Venue &amp; access</span>
+      <h2 class="section-title">Getting to Academia Sinica</h2>
+    </div>
+    <div class="venue-grid venue">
+      <div>
+        <h3>Biodiversity Research Center</h3>
+        <p>128 Academia Road, Section 2, Nankang District, Taipei 115, Taiwan<br>中央研究院 生物多樣性研究中心</p>
+        <ul>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="16" rx="3"/><path d="M4 11h16M8 19l-2 2M16 19l2 2"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg><span><strong>By MRT:</strong> Take the Bannan Line (blue) to Nangang Exhibition Center, then bus or taxi (about 10 minutes) to Academia Sinica.</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14M6 17V9l2-4h8l2 4v8M8 21v-2M16 21v-2"/><circle cx="8.5" cy="13.5" r="1"/><circle cx="15.5" cy="13.5" r="1"/></svg><span><strong>By bus:</strong> Routes 212, 270, and 小12 stop at the Academia Sinica gate.</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12l3-7h14l3 7v6h-3M5 18H2v-6M7 18h10M6 18a2 2 0 1 0 4 0M14 18a2 2 0 1 0 4 0"/></svg><span><strong>From TPE / TSA airports:</strong> Roughly 45 minutes by taxi from Taoyuan, 25 minutes from Songshan.</span></li>
+        </ul>
+      </div>
+      <a class="venue-card map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Academia+Sinica+Taipei" target="_blank" rel="noopener">
+        <div class="map-visual">
+          <svg class="contours" viewBox="0 0 400 250" fill="none" stroke="currentColor" stroke-width="1.4" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path d="M40,212 C120,150 184,250 280,182 S420,124 472,170"/>
+            <path d="M-12,162 C92,110 172,202 262,132 S424,82 462,122"/>
+            <path d="M18,112 C112,70 162,150 252,92 S402,52 452,82"/>
+            <path d="M58,62 C132,30 182,92 262,52 S392,22 442,42"/>
+          </svg>
+          <span class="map-pin">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+        </div>
+        <div class="map-cta">
+          <span class="addr">Academia Sinica, Nangang, Taipei</span>
+          <span class="map-open">Open in Google Maps
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REGISTER ===================== -->
+<section id="register" class="register">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Registration</span>
+      <h2 class="section-title">Reserve your place</h2>
+      <p class="lead">Registration is free for the academic community. Complete the form below to register, submit an abstract, and sign up for the workshop dinner.</p>
+    </div>
+
+    <div class="reg-grid">
+      <div class="reg-info">
+        <dl class="reg-fact"><dt>Registration deadline</dt><dd>To be announced<small>opens summer 2026</small></dd></dl>
+        <dl class="reg-fact"><dt>Abstract deadline</dt><dd>To be announced<small>for talks &amp; posters</small></dd></dl>
+        <dl class="reg-fact"><dt>Fee</dt><dd>Free<small>lunch &amp; coffee included</small></dd></dl>
+      </div>
+
+      <!-- ============================================================= -->
+      <!--  GOOGLE FORM GOES HERE                                        -->
+      <!--  Replace the .form-placeholder block below with your iframe:  -->
+      <!--                                                               -->
+      <!--  <div class="form-embed">                                     -->
+      <!--    <iframe                                                    -->
+      <!--      src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true" -->
+      <!--      title="Registration form">Loading…</iframe>             -->
+      <!--  </div>                                                       -->
+      <!-- ============================================================= -->
+      <div class="form-embed">
+        <div class="form-placeholder">
+          <div>
+            <svg class="ph-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <h4>Registration form will appear here</h4>
+            <p>Paste your Google Form embed code in place of this panel. Look for the comment marked <code>GOOGLE FORM GOES HERE</code> in the page source.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ORGANIZERS ===================== -->
+<section id="organizers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Organization</span>
+      <h2 class="section-title">Who is behind this</h2>
+    </div>
+    <div class="org-grid">
+      <div class="org-list">
+        <div class="org-item"><span class="role">Host institute</span><span class="name">Biodiversity Research Center<small>Academia Sinica, Taipei</small></span></div>
+        <div class="org-item"><span class="role">Chair</span><span class="name">To be confirmed<small>Organizing committee</small></span></div>
+        <div class="org-item"><span class="role">Taiwan committee</span><span class="name">To be confirmed</span></div>
+        <div class="org-item"><span class="role">Japan committee</span><span class="name">To be confirmed</span></div>
+        <div class="org-item"><span class="role">Secretariat</span><span class="name">To be confirmed</span></div>
+      </div>
+      <div class="contact-card">
+        <h3>Contact</h3>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <a href="mailto:workshop@example.org">workshop@example.org</a>
+        </div>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>Biodiversity Research Center, Academia Sinica</span>
+        </div>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+          <a href="#top">www.example.org/workshop</a>
+        </div>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--muted)">For questions about abstracts, travel, or registration, please email the secretariat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="#1f3a5f" stroke-width="1.4"/><path d="M2 24c5 0 5-5 10-5s5 5 10 5 5-5 10-5 5 5 6 5" stroke="#4a89a8" stroke-width="1.4"/></svg>
+      <span>Taiwan-Japan Ecology Workshop 2026</span>
+    </div>
+    <p>Hosted at the Biodiversity Research Center, Academia Sinica &middot; Taipei, Taiwan</p>
+  </div>
+</footer>
+
+<script>
+// mobile nav
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  links.classList.remove('open'); toggle.setAttribute('aria-expanded', false);
+}));
+
+// program day tabs
+document.querySelectorAll('.prog-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.prog-tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+    tab.setAttribute('aria-selected', 'true');
+    const day = tab.dataset.day;
+    document.querySelectorAll('.prog-day').forEach(d => d.classList.toggle('active', d.dataset.day === day));
+  });
+});
+
+// active nav link on scroll
+const sections = [...document.querySelectorAll('section[id]')];
+const navAnchors = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+const byHash = h => navAnchors.find(a => a.getAttribute('href') === '#' + h);
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navAnchors.forEach(a => a.classList.remove('active'));
+      const link = byHash(e.target.id);
+      if (link && !link.classList.contains('btn')) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
