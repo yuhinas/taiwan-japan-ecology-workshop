@@ -250,6 +250,10 @@ section{padding-block:clamp(3.6rem,7vw,6rem)}
 .accom-fact dd small a:hover{color:var(--washi)}
 .form-notice{margin:.15rem .35rem .7rem;padding:.6rem .85rem;border-left:3px solid var(--yamabuki);
   background:rgba(207,144,35,.10);border-radius:6px;font-size:.86rem;line-height:1.5;color:var(--sumi);font-weight:500}
+.form-open{text-align:center;margin:.15rem .35rem .85rem}
+.form-open a{display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:500;color:var(--konjo);
+  border:1px solid var(--line);border-radius:999px;padding:.5rem 1.15rem;transition:border-color .15s ease,background .15s ease}
+.form-open a:hover{border-color:var(--konjo);background:rgba(31,58,95,.04)}
 .reg-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:start;margin-top:2.4rem}
 .reg-info{display:grid;gap:1.4rem;align-content:start}
 .reg-fact{border:1px solid rgba(251,249,243,.18);border-radius:12px;padding:1.1rem 1.3rem;background:rgba(251,249,243,.05)}
@@ -675,6 +679,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
       <!-- ============================================================= -->
       <div class="form-embed">
         <p class="form-notice">⚠️ 請先完成繳費，再填寫此表單 · Please complete payment before filling out this form.</p>
+        <p class="form-open"><a href="https://docs.google.com/forms/d/e/1FAIpQLSffRNXOZIfJK8DqLNB2_904UV7NstrQ9jh6K0M98Z0mmio0Kw/viewform" target="_blank" rel="noopener">在新分頁開啟報名表單 · Open the form in a new tab ↗</a></p>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSffRNXOZIfJK8DqLNB2_904UV7NstrQ9jh6K0M98Z0mmio0Kw/viewform?embedded=true"
           title="The 8th Taiwan–Japan Ecology Workshop registration form"
