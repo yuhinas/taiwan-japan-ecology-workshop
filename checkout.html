@@ -150,7 +150,7 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
     <form id="cart" novalidate>
       <div class="step">
         <div class="step-head"><span class="step-num">1</span><h2>Registration</h2></div>
-        <div id="rateBadge" class="rate-badge">Early bird rate, until 15 September 2026</div>
+        <div id="rateBadge" class="rate-badge">Early bird rate, until 25 September 2026</div>
         <label class="opt selected">
           <input type="radio" name="cat" value="General" checked>
           <span class="opt-label"><span class="t">General</span><span class="s">Faculty, postdoc, and others</span></span>
@@ -225,7 +225,7 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
 // the buyer to ECPay's secure card page.
 const CONFIG = { paymentEndpoint: "https://script.google.com/macros/s/AKfycbzMh72B1YDUE9WEKMAGP7sfiyAB2czPxax_esqQSWZrRLRUwBtcg2Wcq6vyxoruMs0iIQ/exec" };
 
-const EARLY_DEADLINE = new Date("2026-09-15T23:59:59+08:00");
+const EARLY_DEADLINE = new Date("2026-09-25T23:59:59+08:00");
 const PRICES = {
   registration: { General: { early: 1200, regular: 1500 }, Student: { early: 800, regular: 1000 } },
   banquet: { General: 1000, Student: 500 },
@@ -250,7 +250,7 @@ function paintPrices() {
   });
   const badge = document.getElementById("rateBadge");
   if (isEarly) {
-    badge.textContent = "Early bird rate, until 15 September 2026";
+    badge.textContent = "Early bird rate, until 25 September 2026";
     badge.classList.remove("regular");
   } else {
     badge.textContent = "Regular rate";

@@ -108,6 +108,16 @@ section{padding-block:clamp(3.6rem,7vw,6rem)}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--konjo);margin:4px 0;transition:.25s}
 
+/* ===================== DEADLINE ANNOUNCEMENT ===================== */
+.deadline-notice{background:#f6dfaa;color:var(--konjo);border-bottom:2px solid var(--yamabuki)}
+.deadline-notice-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  gap:.45rem 1rem;padding-block:1rem;text-align:center;line-height:1.45}
+.deadline-notice-label{background:var(--konjo);color:var(--washi);border-radius:4px;
+  padding:.3rem .55rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.deadline-notice p{font-size:clamp(1rem,1.5vw,1.16rem);font-weight:500}
+.deadline-notice time{font-weight:700;white-space:nowrap}
+.deadline-notice a{font-size:.9rem;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+
 /* ===================== HERO ===================== */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .hero{padding-top:clamp(1.4rem,3.2vw,2.6rem);padding-bottom:0}
@@ -365,6 +375,15 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   </div>
 </header>
 
+<!-- ===================== DEADLINE ANNOUNCEMENT ===================== -->
+<aside class="deadline-notice" aria-label="Deadline extension announcement">
+  <div class="wrap deadline-notice-inner">
+    <span class="deadline-notice-label">Deadline extended</span>
+    <p>Early-bird registration &amp; abstract submission: <time datetime="2026-09-25">25 September 2026</time></p>
+    <a href="#register">Register &amp; submit &rarr;</a>
+  </div>
+</aside>
+
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
   <h1 class="sr-only">The 8th Taiwan–Japan Ecology Workshop, Academia Sinica, Taipei, 6 to 8 November 2026</h1>
@@ -589,7 +608,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="section-head">
       <span class="eyebrow">Registration fees</span>
       <h2 class="section-title">Fees</h2>
-      <p class="lead">Early-bird rates apply to payments received by <strong>15 September 2026</strong>; the regular rate applies afterwards, until registration closes on <strong>1 October 2026</strong>. Capacity is limited to 200 participants (50 places reserved for the delegation from Japan), on a first-come, first-served basis.</p>
+      <p class="lead">Early-bird rates apply to payments received by <strong>25 September 2026</strong>; the regular rate applies afterwards, until registration closes on <strong>1 October 2026</strong>. Capacity is limited to 200 participants (50 places reserved for the delegation from Japan), on a first-come, first-served basis.</p>
     </div>
     <div class="fee-wrap">
       <div class="fee-card">
@@ -597,7 +616,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
           <thead>
             <tr>
               <th>Registration</th>
-              <th>Early bird<small>by 15 Sep</small></th>
+              <th>Early bird<small>by 25 Sep</small></th>
               <th>Regular<small>by 1 Oct</small></th>
             </tr>
           </thead>
@@ -629,7 +648,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="section-head">
       <span class="eyebrow">Registration</span>
       <h2 class="section-title">Reserve your place</h2>
-      <p class="lead">Please complete your payment first, then fill out the form below to register and submit an abstract. The abstract deadline is 15 September; registration closes 1 October 2026. Payment is by bank transfer (for registrants from Taiwan) or credit card (for registrants from Japan).</p>
+      <p class="lead">Please complete your payment first, then fill out the form below to register and submit an abstract. The abstract deadline is 25 September; registration closes 1 October 2026. Payment is by bank transfer (for registrants from Taiwan) or credit card (for registrants from Japan).</p>
 
       <p class="cap-note">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg>
@@ -640,8 +659,8 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="reg-grid">
       <div class="reg-info">
         <dl class="reg-fact"><dt>Registration deadline</dt><dd>1 October 2026<small>register before this date</small></dd></dl>
-        <dl class="reg-fact"><dt>Abstract deadline</dt><dd>15 September 2026<small>for talks &amp; posters</small></dd></dl>
-        <dl class="reg-fact"><dt>Early bird</dt><dd>By 15 September 2026<small>early-bird rate deadline</small></dd></dl>
+        <dl class="reg-fact"><dt>Abstract deadline</dt><dd>25 September 2026<small>for talks &amp; posters</small></dd></dl>
+        <dl class="reg-fact"><dt>Early bird</dt><dd>By 25 September 2026<small>early-bird rate deadline</small></dd></dl>
         <dl class="reg-fact accom-fact">
           <dt>Accommodation</dt>
           <dd>Academic Activity Center
