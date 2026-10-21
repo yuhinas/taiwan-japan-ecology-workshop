@@ -352,6 +352,9 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
   .slot{grid-template-columns:1fr;gap:.3rem}
   .hero-cta .btn{flex:1;justify-content:center}
 }
+/* Published programme overview */
+#program .slot{grid-template-columns:125px 1fr}#program .slot-time{font-size:.88rem}#program .slot-body a:hover{text-decoration:underline;text-underline-offset:3px}#speakers .spk:hover{border-color:var(--yamabuki)}
+@media(max-width:600px){#program .slot{grid-template-columns:1fr;gap:.35rem}#program .slot-time{font-size:.82rem}}
 </style>
 </head>
 <body>
@@ -383,13 +386,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
 </header>
 
 <!-- ===================== DEADLINE ANNOUNCEMENT ===================== -->
-<aside class="deadline-notice" aria-label="Deadline extension announcement">
-  <div class="wrap deadline-notice-inner">
-    <span class="deadline-notice-label">Deadline extended</span>
-    <p>Early-bird registration &amp; abstract submission: <time datetime="2026-09-25">25 September 2026</time></p>
-    <a href="#register">Register &amp; submit &rarr;</a>
-  </div>
-</aside>
+<aside class="deadline-notice" aria-label="Programme announcement"><div class="wrap deadline-notice-inner"><span class="deadline-notice-label">Programme available</span><p>Explore the programme for <strong>6–8 November 2026</strong></p><a href="taiwan-japan-ecology-workshop-program.html">View programme →</a><a href="TJEW2026_Programme_20261021.pdf" download>Download PDF ↓</a></div></aside>
 
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
@@ -418,7 +415,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
       </div>
       <div class="hero-bar-cta">
         <a class="btn btn-primary" href="#register">Register</a>
-        <a class="btn btn-ghost" href="#program">Program</a>
+        <a class="btn btn-ghost" href="taiwan-japan-ecology-workshop-program.html">Full programme</a>
       </div>
     </div>
   </div>
@@ -505,73 +502,10 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
 </section>
 
 <!-- ===================== PROGRAM ===================== -->
-<section id="program">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Program</span>
-      <h2 class="section-title">Three days, at a glance</h2>
-      <p class="lead">Plenary lectures open each of the first two days and close the last; concurrent sessions, symposia and posters fill the days between. Each contributed talk runs 15 minutes (a 12-minute talk plus 3 minutes for questions); with two parallel sessions, the program has room for up to 64 contributed talks, alongside the plenary lectures. Titles and speakers will be confirmed nearer the date. <span class="tbc">draft</span><br><a href="taiwan-japan-ecology-workshop-program.html" style="color:var(--ai);text-decoration:underline;text-underline-offset:2px">See the full program →</a></p>
-    </div>
-
-    <div class="prog-tabs" role="tablist" aria-label="Program days">
-      <button class="prog-tab" role="tab" aria-selected="true" data-day="1">Day 1 &middot; Fri 6 Nov</button>
-      <button class="prog-tab" role="tab" aria-selected="false" data-day="2">Day 2 &middot; Sat 7 Nov</button>
-      <button class="prog-tab" role="tab" aria-selected="false" data-day="3">Day 3 &middot; Sun 8 Nov</button>
-    </div>
-
-    <div class="prog-day active" data-day="1">
-      <div class="slot"><div class="slot-time">11:00</div><div class="slot-body"><h4>Registration open</h4><p>Lobby, IBMS Building (until 17:00)</p></div></div>
-      <div class="slot"><div class="slot-time">13:00</div><div class="slot-body"><h4>Opening</h4><p>Welcome &amp; introductions</p></div></div>
-      <div class="slot keynote"><div class="slot-time">13:20</div><div class="slot-body"><h4>PL-1 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot keynote"><div class="slot-time">14:00</div><div class="slot-body"><h4>PL-2 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot break"><div class="slot-time">14:40</div><div class="slot-body"><h4>Coffee break</h4></div></div>
-      <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions (until 17:00)</p></div></div>
-      <div class="slot"><div class="slot-time">17:30</div><div class="slot-body"><h4>Poster session &amp; drinks &middot; P01–P61</h4><p>Posters open from 13:00; core time with free drinks 17:30–19:30</p></div></div>
-    </div>
-
-    <div class="prog-day" data-day="2">
-      <div class="slot"><div class="slot-time">08:30</div><div class="slot-body"><h4>Registration open</h4><p>Lobby, IBMS Building (until 18:00)</p></div></div>
-      <div class="slot keynote"><div class="slot-time">09:00</div><div class="slot-body"><h4>PL-3 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot keynote"><div class="slot-time">09:40</div><div class="slot-body"><h4>PL-4 &middot; Plenary lecture</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot break"><div class="slot-time">10:20</div><div class="slot-body"><h4>Coffee break</h4></div></div>
-      <div class="slot"><div class="slot-time">10:40</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions</p></div></div>
-      <div class="slot break"><div class="slot-time">12:40</div><div class="slot-body"><h4>Lunch</h4></div></div>
-      <div class="slot"><div class="slot-time">14:00</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions</p></div></div>
-      <div class="slot"><div class="slot-time">16:00</div><div class="slot-body"><h4>Announcement</h4><p>Host of the next Taiwan–Japan Ecology Workshop</p></div></div>
-      <div class="slot"><div class="slot-time">16:20</div><div class="slot-body"><h4>Poster session &amp; drinks &middot; PA01–PA71</h4><p>Core time with free drinks (until 18:00)</p></div></div>
-      <div class="slot break"><div class="slot-time">19:00</div><div class="slot-body"><h4>Banquet</h4><p>19:00–21:00</p></div></div>
-    </div>
-
-    <div class="prog-day" data-day="3">
-      <div class="slot"><div class="slot-time">08:30</div><div class="slot-body"><h4>Registration open</h4><p>Lobby, IBMS Building (until 15:00)</p></div></div>
-      <div class="slot"><div class="slot-time">09:00</div><div class="slot-body"><h4>Concurrent sessions</h4><p>Parallel sessions</p></div></div>
-      <div class="slot break"><div class="slot-time">11:00</div><div class="slot-body"><h4>Coffee break</h4></div></div>
-      <div class="slot"><div class="slot-time">11:20</div><div class="slot-body"><h4>Symposia</h4><p>Parallel symposium sessions</p></div></div>
-      <div class="slot break"><div class="slot-time">13:00</div><div class="slot-body"><h4>Lunch</h4></div></div>
-      <div class="slot keynote"><div class="slot-time">14:00</div><div class="slot-body"><h4>PL-5 &middot; Closing lecture</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot keynote"><div class="slot-time">14:40</div><div class="slot-body"><h4>PL-6 &middot; Closing lecture</h4><p>Speaker to be announced</p></div></div>
-      <div class="slot"><div class="slot-time">15:20</div><div class="slot-body"><h4>Award ceremony</h4></div></div>
-      <div class="slot"><div class="slot-time">16:10</div><div class="slot-body"><h4>Closing remarks</h4></div></div>
-    </div>
-  </div>
-</section>
+<section id="program"><div class="wrap"><div class="section-head"><span class="eyebrow">Programme · 21 October 2026 edition</span><h2 class="section-title">Three days, at a glance</h2><p class="lead">Four plenary lectures, five symposia, five contributed-talk sessions and 56 posters. Explore the full programme for every speaker, title and session.</p><div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem"><a class="btn btn-primary" href="taiwan-japan-ecology-workshop-program.html">Explore the full programme →</a><a class="btn btn-ghost" href="TJEW2026_Programme_20261021.pdf" download>Download programme PDF ↓</a></div></div><div class="prog-tabs" role="tablist" aria-label="Program days"><button class="prog-tab" role="tab" aria-selected="true" data-day="1">Day 1 · Fri 6 Nov</button><button class="prog-tab" role="tab" aria-selected="false" data-day="2">Day 2 · Sat 7 Nov</button><button class="prog-tab" role="tab" aria-selected="false" data-day="3">Day 3 · Sun 8 Nov</button></div><div class="prog-day active" data-day="1"><div class="slot "><div class="slot-time">11:00–17:00</div><div class="slot-body"><h4>Registration</h4><p>IBMS 1F lobby</p></div></div><div class="slot "><div class="slot-time">13:00–13:10</div><div class="slot-body"><h4>Opening</h4><p>B1C Auditorium</p></div></div><div class="slot keynote"><div class="slot-time">13:10–14:00</div><div class="slot-body"><h4><a href="taiwan-japan-ecology-workshop-program.html#PL1">PL1 · Chih-hao Hsieh 謝志豪</a></h4><p>Empirical dynamic modeling towards mechanic understanding, forecasting and early warning for ecosystem dynamics · B1C Auditorium</p></div></div><div class="slot "><div class="slot-time">14:05–14:50</div><div class="slot-body"><h4>Parallel sessions</h4><p><a href="taiwan-japan-ecology-workshop-program.html#C4">B1C: C4 · Climate Change and Invasions</a><br><a href="taiwan-japan-ecology-workshop-program.html#C5">B1B: C5 · Range Limits, Long-term Change and Island Conservation</a></p></div></div><div class="slot break"><div class="slot-time">14:50–15:20</div><div class="slot-body"><h4>Coffee break</h4><p></p></div></div><div class="slot "><div class="slot-time">15:20–17:20</div><div class="slot-body"><h4>Parallel sessions</h4><p><a href="taiwan-japan-ecology-workshop-program.html#S5">B1C: S5 · Host–Symbiont Interactions in a Changing World: Mechanisms, Evolution, and Ecological Consequences</a><br><a href="taiwan-japan-ecology-workshop-program.html#C1">B1B: C1 · Aquatic Ecosystems: From Freshwater to the Sea</a></p></div></div><div class="slot "><div class="slot-time">17:30–19:30</div><div class="slot-body"><h4><a href="taiwan-japan-ecology-workshop-program.html#posters-1">Poster session 1 &amp; drinks · P01–P28</a></h4><p>Interdisciplinary Research Building, 1F</p></div></div></div><div class="prog-day " data-day="2"><div class="slot "><div class="slot-time">08:30–18:00</div><div class="slot-body"><h4>Registration</h4><p>IBMS 1F lobby</p></div></div><div class="slot keynote"><div class="slot-time">08:50–09:40</div><div class="slot-body"><h4><a href="taiwan-japan-ecology-workshop-program.html#PL2">PL2 · Kazuki Tsuji 辻和希</a></h4><p>A Process-Based Field Approach Linking Classical Theory of Sociobiology and Classical Theories of Population and Community Ecology · B1C Auditorium</p></div></div><div class="slot keynote"><div class="slot-time">09:40–10:30</div><div class="slot-body"><h4><a href="taiwan-japan-ecology-workshop-program.html#PL3">PL3 · Hiroko Kurokawa 黒川紘子</a></h4><p>From plant strategies to ecosystem functioning: insights from litter decomposition · B1C Auditorium</p></div></div><div class="slot break"><div class="slot-time">10:30–11:00</div><div class="slot-body"><h4>Coffee break</h4><p></p></div></div><div class="slot "><div class="slot-time">11:00–13:00</div><div class="slot-body"><h4>Parallel sessions</h4><p><a href="taiwan-japan-ecology-workshop-program.html#S1">B1C: S1 · Behavior of Social Insects: Its Ecological and Applied Biological Perspectives</a><br><a href="taiwan-japan-ecology-workshop-program.html#C2">B1B: C2 · Plants, Communities and Landscapes</a></p></div></div><div class="slot break"><div class="slot-time">13:00–14:00</div><div class="slot-body"><h4>Lunch</h4><p>IBMS 1F dining area</p></div></div><div class="slot "><div class="slot-time">14:00–16:00</div><div class="slot-body"><h4>Parallel sessions</h4><p><a href="taiwan-japan-ecology-workshop-program.html#S2">B1C: S2 · Recent Developments and Methodological Innovations in Biotic Interactions and Natural History Research</a><br><a href="taiwan-japan-ecology-workshop-program.html#S3">B1B: S3 · From Ecology to Molecules: Evolutionary Mechanisms Underlying Adaptation and Biodiversity</a></p></div></div><div class="slot "><div class="slot-time">16:00–18:00</div><div class="slot-body"><h4><a href="taiwan-japan-ecology-workshop-program.html#posters-2">Poster session 2 &amp; drinks · PA01–PA28</a></h4><p>Interdisciplinary Research Building, 1F</p></div></div><div class="slot break"><div class="slot-time">19:00–21:00</div><div class="slot-body"><h4>Banquet</h4><p>Interdisciplinary Research Building, 7F</p></div></div></div><div class="prog-day " data-day="3"><div class="slot "><div class="slot-time">08:30–12:25</div><div class="slot-body"><h4>Registration</h4><p>IBMS 1F lobby</p></div></div><div class="slot "><div class="slot-time">09:00–11:00</div><div class="slot-body"><h4>Parallel sessions</h4><p><a href="taiwan-japan-ecology-workshop-program.html#S4">B1C: S4 · Beyond Direct Competition in Species Coexistence: The Role of Multitrophic Interactions</a><br><a href="taiwan-japan-ecology-workshop-program.html#C3">B1B: C3 · Behaviour and Evolution</a> (09:00–10:30)</p></div></div><div class="slot break"><div class="slot-time">11:00–11:30</div><div class="slot-body"><h4>Coffee break</h4><p></p></div></div><div class="slot keynote"><div class="slot-time">11:30–12:20</div><div class="slot-body"><h4><a href="taiwan-japan-ecology-workshop-program.html#Closing">Closing · Chien-Hsiang Lin 林千翔</a></h4><p>When the ocean gets too warm: lessons from ancient fish communities · B1C Auditorium</p></div></div><div class="slot "><div class="slot-time">12:20–12:25</div><div class="slot-body"><h4>The 9th Taiwan–Japan Ecology Workshop</h4><p>Kyushu University · 2028 · Tomonori Kume 久米朋宣 · B1C Auditorium</p></div></div><div class="slot "><div class="slot-time">12:25</div><div class="slot-body"><h4>Lunch and close of the workshop</h4><p>IBMS 1F dining area</p></div></div></div></div></section>
 
 <!-- ===================== SPEAKERS ===================== -->
-<section id="speakers" class="speakers">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Speakers</span>
-      <h2 class="section-title">Plenary &amp; closing lectures</h2>
-      <p class="lead">Six lectures open and close the meeting. The line-up is being finalized. <span class="tbc">to be announced</span></p>
-    </div>
-    <div class="spk-grid">
-      <div class="spk"><div class="spk-photo">了</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Taiwan</span></div>
-      <div class="spk"><div class="spk-photo">海</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Japan</span></div>
-      <div class="spk"><div class="spk-photo">山</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Taiwan</span></div>
-      <div class="spk"><div class="spk-photo">波</div><h4>To be announced</h4><p>Affiliation</p><span class="flag">Japan</span></div>
-    </div>
-  </div>
-</section>
+<section id="speakers" class="speakers"><div class="wrap"><div class="section-head"><span class="eyebrow">Speakers</span><h2 class="section-title">Plenary &amp; closing lectures</h2><p class="lead">Four perspectives on ecology and biodiversity. All plenary lectures take place in the B1C Auditorium, IBMS Building.</p></div><div class="spk-grid"><a class="spk" href="taiwan-japan-ecology-workshop-program.html#PL1"><div class="spk-photo" style="font:600 1.3rem var(--body)">PL1</div><h4>Chih-hao Hsieh 謝志豪</h4><p>National Taiwan University</p><span class="flag">6 Nov · 13:10–14:00</span></a><a class="spk" href="taiwan-japan-ecology-workshop-program.html#PL2"><div class="spk-photo" style="font:600 1.3rem var(--body)">PL2</div><h4>Kazuki Tsuji 辻和希</h4><p>University of the Ryukyus</p><span class="flag">7 Nov · 08:50–09:40</span></a><a class="spk" href="taiwan-japan-ecology-workshop-program.html#PL3"><div class="spk-photo" style="font:600 1.3rem var(--body)">PL3</div><h4>Hiroko Kurokawa 黒川紘子</h4><p>Kyoto University</p><span class="flag">7 Nov · 09:40–10:30</span></a><a class="spk" href="taiwan-japan-ecology-workshop-program.html#Closing"><div class="spk-photo" style="font:600 1.3rem var(--body)">Closing</div><h4>Chien-Hsiang Lin 林千翔</h4><p>Academia Sinica</p><span class="flag">8 Nov · 11:30–12:20</span></a></div></div></section>
 
 <!-- ===================== VENUE ===================== -->
 <section id="venue">
@@ -583,7 +517,7 @@ footer{background:var(--washi);border-top:1px solid var(--line);padding-block:2.
     <div class="venue-grid venue">
       <div>
         <h3>B1C Auditorium, IBMS Building</h3>
-        <p>The workshop is held at the <strong>B1C Auditorium</strong>, Institute of Biomedical Sciences (IBMS) Building, Academia Sinica（中央研究院）. Concurrent sessions and posters are held in the adjacent Interdisciplinary Research Building（跨領域研究大樓）.<br>128 Academia Road, Section 2, Nangang District, Taipei 115, Taiwan</p>
+        <p>The workshop is held at the <strong>B1C Auditorium</strong>, Institute of Biomedical Sciences (IBMS) Building, Academia Sinica（中央研究院）. Parallel sessions take place in the <strong>B1C and B1B Auditoriums</strong> of IBMS. Poster sessions are held on <strong>1F</strong> and the Saturday banquet on <strong>7F</strong> of the adjacent Interdisciplinary Research Building（跨領域研究大樓）.<br>128 Academia Road, Section 2, Nangang District, Taipei 115, Taiwan</p>
         <ul>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="16" rx="3"/><path d="M4 11h16M8 19l-2 2M16 19l2 2"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg><span><strong>By MRT:</strong> Take the Bannan Line (blue) to Nangang Exhibition Center, then bus or taxi (about 10 minutes) to Academia Sinica.</span></li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14M6 17V9l2-4h8l2 4v8M8 21v-2M16 21v-2"/><circle cx="8.5" cy="13.5" r="1"/><circle cx="15.5" cy="13.5" r="1"/></svg><span><strong>By bus:</strong> Routes 212, 270, and 小12 stop at the Academia Sinica gate.</span></li>
