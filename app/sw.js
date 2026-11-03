@@ -1,5 +1,5 @@
 /* Each release is cached atomically. A waiting release is activated only on request. */
-const CACHE = 'tjew-pocket-fe9970800e7f';
+const CACHE = 'tjew-pocket-95ddc4180578';
 const SHELL = ["./", "index.html", "app.css", "typography.css", "app.js", "data.json", "manifest.webmanifest", "assets/EBGaramond-OFL.txt", "assets/NotoSans-OFL.txt", "assets/NotoSansJP-OFL.txt", "assets/NotoSansTC-OFL.txt", "assets/app-qr.png", "assets/campus.jpg", "assets/chien-hsiang-lin.webp", "assets/chih-hao-hsieh.webp", "assets/font-ebgaramond-italic.woff2", "assets/font-ebgaramond.woff2", "assets/font-notosans-italic.woff2", "assets/font-notosans.woff2", "assets/font-notosansjp.woff2", "assets/font-notosanstc.woff2", "assets/hero.webp", "assets/hiroko-kurokawa.webp", "assets/icon-192.png", "assets/icon-512.png", "assets/icon-maskable.png", "assets/icon.svg", "assets/kazuki-tsuji.webp", "assets/share.jpg"];
 const ROOT = new URL('./', self.location.href);
 const PDF_CACHE = 'tjew-pocket-booklet';
