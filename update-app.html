@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="theme-color" content="#f7f5ed"><title>Update your app · TJEW 2026</title><link rel="icon" href="app/assets/icon.svg"><link rel="stylesheet" href="app/typography.css"><style>
+*{box-sizing:border-box}body{margin:0;background:#f7f5ed;color:#203b50;font-family:"Noto Sans","Noto Sans TC","Noto Sans JP",sans-serif;line-height:1.65;min-height:100dvh;display:grid;place-items:center;padding:24px}main{max-width:480px;width:100%;padding:36px 30px;background:#fffdf6;border:1px solid #d6d9cc;border-radius:20px}img{width:58px;height:58px;margin-bottom:15px}h1{font-family:"EB Garamond",serif;font-size:36px;line-height:1.15;margin:0 0 20px;font-weight:500}p{font-size:14px;margin:12px 0;color:#465a53}.status{padding:14px 16px;background:#edf0e8;border-radius:10px;color:#203b50}button,a{font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;min-height:44px}button{border:0;border-radius:9px;padding:13px 20px;background:#203b50;color:white;cursor:pointer;margin-top:10px}a{display:inline-flex;align-items:center;color:#203b50;margin-top:15px;text-underline-offset:4px}.small{font-size:12px}button:focus-visible,a:focus-visible{outline:3px solid #99702d;outline-offset:4px}[hidden]{display:none!important}
+</style></head><body><main><img src="app/assets/icon.svg" alt="TJEW 2026"><h1>Update your workshop app</h1><p>Your saved talks will be kept. The workshop guide will open when the update is ready.</p><p class="status" id="status" role="status">Checking for the latest version…</p><button type="button" id="retry" hidden>Try again</button><br><a href="app/#guide">Return to the workshop guide ↗</a><p class="small">Keep this page open while the update downloads.</p></main><script>
+(()=>{
+ const status=document.getElementById('status'),retry=document.getElementById('retry');
+ function waitFor(worker,states){return new Promise((resolve,reject)=>{const timer=setTimeout(()=>finish(new Error('Update timed out')),60000);function finish(error){clearTimeout(timer);worker.removeEventListener('statechange',check);error?reject(error):resolve();}function check(){if(states.includes(worker.state))finish();else if(worker.state==='redundant')finish(new Error('Update unavailable'));}worker.addEventListener('statechange',check);check();});}
+ async function update(){retry.hidden=true;status.textContent='Checking for the latest version…';try{
+  if('serviceWorker'in navigator){
+   const reg=await navigator.serviceWorker.register('app/sw.js',{scope:'app/',updateViaCache:'none'});
+   await reg.update();
+   if(reg.installing){status.textContent='Downloading the latest programme and venue details…';await waitFor(reg.installing,['installed','activated']);}
+   const waiting=reg.waiting;
+   if(waiting){status.textContent='Opening the updated workshop guide…';const activated=waitFor(waiting,['activated']);waiting.postMessage({type:'SKIP_WAITING'});await activated;}
+   else if(reg.active&&reg.active.state!=='activated')await waitFor(reg.active,['activated']);
+   if(!reg.active)throw new Error('No active version');
+  }
+  status.textContent='Your app is up to date. Opening the guide…';location.replace('app/?updated='+Date.now()+'#guide');
+ }catch(error){status.textContent='The update could not finish. Check your connection and try again. Your saved talks are unchanged.';retry.hidden=false;}}
+ retry.addEventListener('click',update);update();
+})();
+</script></body></html>
