@@ -7,17 +7,17 @@
 <meta name="description" content="Pay your registration and banquet fees for the 2026 Taiwan-Japan Ecology Workshop.">
 <meta name="robots" content="noindex">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+
 
 <style>
 :root{
   --konjo:#1f3a5f; --ai:#2d5a7b; --hanada:#4a89a8; --wakatake:#5b9e7e;
   --yamabuki:#cf9023; --kinari:#f6f2e9; --washi:#fbf9f3; --sumi:#1b2430;
   --muted:#5a6573; --line:rgba(31,58,95,.14); --line-2:rgba(31,58,95,.08);
-  --display:"Shippori Mincho","Noto Serif TC",serif;
-  --body:"Zen Kaku Gothic New","Noto Sans TC",system-ui,sans-serif;
+  --display:"EB Garamond","Noto Sans TC","Noto Sans JP",serif;
+  --body:"Noto Sans","Noto Sans TC","Noto Sans JP",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -120,11 +120,12 @@ h1,h2,h3{font-family:var(--display);color:var(--konjo);line-height:1.2}
 
 
 @media (max-width:820px){
-  .checkout{grid-template-columns:1fr;gap:1.6rem}
+  .checkout{grid-template-columns:minmax(0,1fr);gap:1.6rem}.checkout>*{min-width:0}
   .summary{position:static}
 }
+@media(max-width:480px){.step{padding:1.2rem}.opt{display:grid;grid-template-columns:18px minmax(0,1fr);gap:.5rem .7rem;padding:.9rem}.opt .opt-price{grid-column:2}.guest-row{flex-wrap:wrap}}
 </style>
-</head>
+<link rel="stylesheet" href="app/typography.css?v=20261103"></head>
 <body>
 
 <header class="topbar">

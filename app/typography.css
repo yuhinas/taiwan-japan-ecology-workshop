@@ -1,0 +1,9 @@
+@font-face{font-family:"EB Garamond";src:url("assets/font-ebgaramond.woff2") format("woff2");font-style:normal;font-weight:400 800;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url("assets/font-ebgaramond-italic.woff2") format("woff2");font-style:italic;font-weight:400 800;font-display:swap}
+@font-face{font-family:"Noto Sans";src:url("assets/font-notosans.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:"Noto Sans";src:url("assets/font-notosans-italic.woff2") format("woff2");font-style:italic;font-weight:100 900;font-display:swap}
+@font-face{font-family:"Noto Sans TC";src:url("assets/font-notosanstc.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:"Noto Sans JP";src:url("assets/font-notosansjp.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+/* Two type families throughout: EB Garamond and Noto Sans. */
+:lang(ja){font-family:"Noto Sans","Noto Sans JP","Noto Sans TC",sans-serif}
+:lang(zh-Hant),:lang(zh-TW){font-family:"Noto Sans","Noto Sans TC","Noto Sans JP",sans-serif}
